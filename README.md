@@ -1,71 +1,33 @@
-# MyWhoosh Website
+# 🚴 MyWhoosh Website QA Portfolio
 
-## QA Portfolio Testing Strategy
-
-### Project Type
-
-**Independent QA Portfolio Project**
+An independent Manual QA portfolio project focused on evaluating the quality of the MyWhoosh website through structured software testing.
 
 ---
 
-### Purpose
+## About the Project
 
-This document describes the testing strategy for my personal QA portfolio.
+This repository contains a complete QA portfolio project created as an independent case study.
 
-The goal of this project is not to reproduce MyWhoosh's internal QA process, but to demonstrate a structured and professional approach to software testing by evaluating a real-world product.
+The goal of the project is to demonstrate a structured approach to manual software testing using a real-world website.
 
-All testing activities, documentation, and findings presented in this repository were created independently for educational purposes and to showcase my QA skills.
-
----
-
-## Scope
-
-This project focuses on testing the public **MyWhoosh website**.
-
-The current scope includes:
-
-- Functional testing
-- Website navigation
-- Registration and authentication
-- User interface (UI) review
-- User experience (UX) review
-- Cross-browser compatibility
-- Basic accessibility
-
-The MyWhoosh desktop and mobile applications are currently **out of scope** and may be included in future portfolio updates.
+The documentation follows the same workflow a QA Engineer would typically use during the testing process, from planning and analysis to bug reporting and final reporting.
 
 ---
 
-## Test Environment
+## Project Documentation
 
-### Hardware
-
-- MacBook Apple M3
-
-### Operating System
-
-- macOS Tahoe 26.5.2
-
-### Browsers
-
-- Google Chrome 150.0.7871.115
-- Safari 26.5.2
-- Firefox 152.0.5
-
-### Devices
-
-- Desktop
+- QA Portfolio Testing Strategy
+- Product Analysis
+- Checklists
+- Test Cases
+- Bug Reports
+- UI Review
+- UX Review
+- Accessibility Review
+- Final Test Report
 
 ---
 
-## Testing Objectives
+## Project Status
 
-The objectives of this project are to evaluate:
-
-- Functional behaviour
-- Website navigation
-- Registration and authentication
-- User interface consistency
-- User experience
-- Cross-browser compatibility
-- Basic accessibility
+**In Progress**
