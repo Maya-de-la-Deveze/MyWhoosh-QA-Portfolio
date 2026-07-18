@@ -139,8 +139,7 @@ This project currently includes:
 
 ## Assumptions & Limitations
 
-- Testing is limited to the publicly accessible MyWhoosh website.
-- No access to staging, development, or backend systems.
-- Payment and subscription workflows are not executed.
-- Findings reflect the behaviour of the website at the time of testing and may change as the product evolves.
-- This is an independent portfolio project created for educational and demonstration purposes. It is not affiliated with, endorsed by, or commissioned by MyWhoosh.
+- Testing is limited to the publicly accessible MyWhoosh website; no access to staging/test environments or backend systems
+- Real payments and account-sensitive actions (e.g. subscription purchase) are not executed
+- Findings reflect the site's behaviour at the time of testing and may not remain accurate if the site is updated afterward
+- This is an independent learning project, not affiliated with or commissioned by MyWhoosh
