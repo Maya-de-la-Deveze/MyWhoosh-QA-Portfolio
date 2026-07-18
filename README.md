@@ -18,13 +18,13 @@ The documentation follows the same workflow a QA Engineer would typically use du
 
 - [QA Portfolio Testing Strategy](QA-Portfolio-Testing-Strategy.md)
 - [Product Analysis](Product-Analysis.md)
-- Checklists
-- Test Cases
-- Bug Reports
-- UI Review
-- UX Review
-- Accessibility Review
-- Final Test Report
+- Checklists (in progress)
+- Test Cases (in progress)
+- Bug Reports (in progress)
+- UI Review (planned)
+- UX Review (planned)
+- Accessibility Review (planned)
+- Final Test Report (planned)
 
 ---
 
