@@ -16,7 +16,7 @@ The documentation follows the same workflow a QA Engineer would typically use du
 
 ## Project Documentation
 
-- QA Portfolio Testing Strategy
+- [QA Portfolio Testing Strategy](QA-Portfolio-Testing-Strategy.md)
 - Product Analysis
 - Checklists
 - Test Cases
