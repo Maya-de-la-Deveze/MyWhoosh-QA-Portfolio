@@ -95,8 +95,6 @@ Temporarily stores ride data server-side after crashes or unexpected disconnecti
 
 ---
 
-## Website Structure
-
 ### Main Website
 
 - Get Started
@@ -104,9 +102,12 @@ Temporarily stores ride data server-side after crashes or unexpected disconnecti
 - Routes
 - Events
 - Results
+- Shop
+- Workout Builder
+- UCI CEWC
 - Podcast
-- About MyWhoosh
-- Leadership
+- About Us
+- Login
 
 ### Separate Services
 
@@ -131,31 +132,219 @@ This architecture introduces additional testing scenarios, including:
 
 ---
 
-## Key User Flows
+## Primary User Flows
 
-### Onboarding
+### Get Started
 
-Homepage → Get Started → Download → Device compatibility
+***Homepage → Get Started → Learn how to start using MyWhoosh***
 
-### Account
+**Available sections**
 
-Registration → Login → Profile → Logout
+- Get the App
+- The Essentials
+- Start Riding
+- What's New
 
-### Workout Builder
+**QA Observation**
 
-Create workout → Save → Export → Synchronization information
+The Get Started page serves as an onboarding guide for new users rather than providing standalone functionality.
+
+It explains the setup process, introduces the required equipment, and guides users toward downloading the application. Multiple "Download App" call-to-action buttons are available throughout the page.
+
+### Download
+
+***Homepage → Download → Select platform → Download application***
+
+**Available platforms**
+
+- iOS
+- Android
+- Windows (MyWhoosh)
+- Windows (MyWhoosh HD)
+- macOS
+- Apple TV
+- Link App iOS
+- Link App Android
+
+**QA Observation**
+
+The Download page provides installation packages for all supported platforms.
+
+Users select the required platform and download the appropriate application. No authentication is required.
+
+### Routes
+
+***Homepage → Routes → Select destination → View route information***
+
+**Available sections**
+
+- France
+- Bhutan
+- Japan
+- UCI
+- MyWhoosh World
+- Switzerland
+- California
+- Hudayriyat
+- Arabia
+- Colombia
+
+**QA Observation**
+
+The Routes page presents all available virtual riding destinations.
+
+Each destination has a dedicated page containing a general description, route statistics, and a table listing the available routes with distance and elevation information.
+
+No authentication is required to browse the available routes.
 
 ### Events
 
-Browse events → Open event details → Registration flow
+***Homepage → Events → Select event → Event Details → Register Now → Sign In / Create New Account***
+
+**Available sections**
+
+- Upcoming Events
+- Event Details
+- Event Information
+- Registration
+
+**QA Observation**
+
+The Events page displays a list of upcoming events available on the MyWhoosh platform.
+
+Selecting an event opens a dedicated event page containing the event information and a registration option.
+
+Users can browse all public event information without authentication. However, registering for an event requires signing in to an existing account or creating a new account.
+
+### Results
+
+***Homepage → Results → Select event → View Results***
+
+**Available sections**
+
+- Event Results
+- Search
+- Filters
+- Categories
+- Stage Results
+- Individual Rankings
+
+**QA Observation**
+
+The Results page provides access to public race results without requiring authentication.
+
+Users can browse completed events, open detailed results for a selected event, search for participants, filter results, switch between categories, and view stage-specific rankings.
 
 ### Shop
 
-Navigate to Shop → Browse products → Cart (navigation only)
+***Homepage → Shop → Browse products***
 
-### Newsletter
+**Available sections**
 
-Subscribe → Form validation → Confirmation
+- Product Categories
+- Product Details
+- Search
+- Wishlist
+- Shopping Cart
+- Contact Us
+
+**QA Observation**
+
+The Shop is hosted on a dedicated subdomain (`store.mywhoosh.com`) and functions as a standalone e-commerce website within the MyWhoosh ecosystem.
+
+Users can browse products without authentication. Shopping features such as the wishlist, account management, and checkout require user authentication.
+
+### Workout Builder
+
+***Homepage → Workout Builder → Login page***
+
+**Available sections**
+
+- Workouts
+- My Training Plans
+- Marketplace
+- Subscriptions
+
+**QA Observation**
+
+The Workout Builder is hosted on a dedicated subdomain. Selecting any available section opens the Workout Builder website, where unauthenticated users are redirected to the login page before they can access the available features.
+
+### UCI CEWC
+
+***Homepage → 2025 UCI CEWC***
+
+**Available sections**
+
+- 2025 UCI CEWC
+- Explore Abu Dhabi
+- Event Details
+- Event Gallery
+- Results
+- Watch Replay
+
+**QA Observation**
+
+The UCI CEWC section combines content hosted within the MyWhoosh website and external resources.
+
+- **Explore** redirects users to the dedicated UCI CEWC website.
+- **Watch Replay** opens the official UCI event page.
+- **View Full Results** opens the official UCI results page in a new browser tab.
+- The section uses a dedicated secondary navigation menu that differs from the main website navigation.
+
+### Podcast
+
+***Homepage → Podcast***
+
+**Available sections**
+
+- Featured podcast
+- Podcast episodes
+- Apple Podcasts
+- Spotify
+- YouTube
+
+**QA Observation**
+
+The page displays the latest podcast followed by a list of episodes. Each episode has its own page with an embedded player and links to Apple Podcasts, Spotify, and YouTube.
+
+### About Us
+
+***Homepage → About Us***
+
+**Available sections**
+
+- About MyWhoosh
+- Leadership
+
+**QA Observation**
+
+The **About Us** menu is implemented as a dropdown in the main navigation. Selecting either option opens its corresponding information page.
+
+### Login
+
+***Homepage → Login***
+
+**Available sections**
+
+- Email address
+- Password
+- Forgot Password
+- Stay signed in
+- reCAPTCHA verification
+- Submit
+- Create New Account
+
+**QA Observation**
+
+The Login page allows existing users to sign in using their MyWhoosh account. Users can recover a forgotten password or navigate to the account registration page if they do not already have an account.
+
+
+
+
+
+
+
+
 
 ### Cross-Subdomain Navigation
 
