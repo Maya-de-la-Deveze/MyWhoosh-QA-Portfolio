@@ -107,21 +107,6 @@ Both **positive** (expected/valid input) and **negative** (invalid input, edge c
 
 ---
 
-## Test Environment
-
-### Hardware
-
-- MacBook Air M3
-
-### Operating System
-
-- macOS Tahoe 26.5.2
-
-### Browsers
-
-- Google Chrome 150.0.7871.115
-- Safari 26.5.2
-- Mozilla Firefox 152.0.5
 
 ### Devices
 
