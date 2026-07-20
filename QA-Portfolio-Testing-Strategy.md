@@ -2,7 +2,7 @@
 
 ## QA Portfolio Testing Strategy
 
-*Last updated: 18 July 2026*
+*Last updated: 19 July 2026*
 
 ### Project Type
 
@@ -68,6 +68,26 @@ Testing is performed manually, combining two methods:
 Both **positive** (expected/valid input) and **negative** (invalid input, edge cases, boundary values) scenarios are covered where applicable.
 
 ---
+## Test Coverage Matrix
+
+| Feature | Test Artifact |
+|---------|---------------|
+| Navigation | Checklist |
+| Download | Checklist |
+| Login | Test Cases |
+| Registration | Test Cases |
+| Events | Test Cases |
+| Routes | Checklist |
+| Shop | Checklist |
+| Results | Checklist |
+| Workout Builder | Checklist |
+| UCI CEWC | Checklist |
+| About / Leadership / Podcast | Checklist |
+| Cross-Subdomain Navigation | Checklist |
+| UI Consistency | UI Review (Figma) |
+| UX Evaluation | UX Review (Figma) |
+| Accessibility | Checklist |
+| Cross-Browser Compatibility | Checklist |
 
 ## Tools & Deliverables
 
