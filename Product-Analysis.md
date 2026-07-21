@@ -111,8 +111,9 @@ Temporarily stores ride data server-side after crashes or unexpected disconnecti
 
 ### MyWhoosh Web Ecosystem
 
+**Main Website**
 mywhoosh.com
-(Main Website)
+
 
 **Results**
 ├── results.mywhoosh.com
