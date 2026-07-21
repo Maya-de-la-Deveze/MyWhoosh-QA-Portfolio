@@ -72,22 +72,27 @@ Both **positive** (expected/valid input) and **negative** (invalid input, edge c
 
 | Feature | Test Artifact |
 |---------|---------------|
+| **Main Website** | |
 | Navigation | Checklist |
+| Get Started (How It Works) | Checklist |
 | Download | Checklist |
-| Login | Test Cases |
-| Registration | Test Cases |
-| Events | Test Cases |
 | Routes | Checklist |
-| Shop | Checklist |
+| Events | Test Cases |
 | Results | Checklist |
+| Shop | Checklist |
 | Workout Builder | Checklist |
 | UCI CEWC | Checklist |
-| About / Leadership / Podcast | Checklist |
+| Podcast | Checklist |
+| About Us | Checklist |
+| Login | Test Cases |
+| Registration | Test Cases |
+| **Cross-Website** | |
 | Cross-Subdomain Navigation | Checklist |
-| UI Consistency | UI Review (Figma) |
-| UX Evaluation | UX Review (Figma) |
-| Accessibility | Checklist |
 | Cross-Browser Compatibility | Checklist |
+| Accessibility | Checklist |
+| **Design Review** | |
+| UI Consistency | UI Review (Checklist + Figma) |
+| UX Evaluation | UX Review (Figma) |
 
 ## Tools & Deliverables
 
