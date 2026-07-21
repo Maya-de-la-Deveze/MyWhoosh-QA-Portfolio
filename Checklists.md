@@ -374,6 +374,8 @@ Checks:
 
 ## *Podcast*
 
+> *Note:* Verification of the footer, partner links, and social sharing services is outside the scope of this educational portfolio project and will be covered in separate checklists.
+
 ### *Podcast Landing*
 
 - [ ] Podcast page loads successfully
