@@ -132,7 +132,7 @@ mywhoosh.com
    
 
 **Authentication / User Account**
-└── event.mywhoosh.com
+├── event.mywhoosh.com
    
 
 ---
