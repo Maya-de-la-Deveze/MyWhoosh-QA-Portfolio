@@ -114,20 +114,25 @@ Temporarily stores ride data server-side after crashes or unexpected disconnecti
 mywhoosh.com
 (Main Website)
 
+**Results**
 ├── results.mywhoosh.com
-   **Results**
+   
 
+**Shop**
 ├── store.mywhoosh.com
-   **Shop**
+   
 
+**Workout Builder**
 ├── workout.mywhoosh.com
-   **Workout Builder**
+   
 
+**UCI CEWC**
 ├── uci.mywhoosh.com
-   **UCI CEWC**
+   
 
+**Authentication / User Account**
 └── event.mywhoosh.com
-   **Authentication / User Account**
+   
 
 ---
 
