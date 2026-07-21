@@ -307,7 +307,7 @@ Checks:
 
 ---
 
-## **UCI Cycling Esports World Championships**
+## **UCI Cycling Esports World Championships** (uci.mywhoosh.com)
 
 
 ### *Header Navigation*
