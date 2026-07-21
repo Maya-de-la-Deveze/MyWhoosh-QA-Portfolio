@@ -14,7 +14,7 @@
 - [Results](#results-resultsmywhooshcom)
 - [Shop](#shop-storemywhooshcom)
 - [Workout Builder](#workout-builder-workoutmywhooshcom)
-- [UCI Cycling Esports World Championships](#uci-cycling-esports-world-championships)
+- [UCI Cycling Esports World Championships](#uci-cycling-esports-world-championships-ucimywhooshcom)
 - [Podcast](#podcast)
 - [Home Page Footer](#home-page-footer)
 - [Cross-Browser Compatibility](#cross-browser-compatibility)
