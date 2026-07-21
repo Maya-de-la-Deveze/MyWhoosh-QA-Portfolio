@@ -4,15 +4,32 @@
 
 *Based on the testing scope and priorities defined in the [Product Analysis](Product-Analysis.md) and [QA Portfolio Testing Strategy](QA-Portfolio-Testing-Strategy.md).*
 
+### Table of Contents
+
+- [Navigation](#navigation)
+- [Get Started (How It Works)](#get-started-how-it-works)
+- [Download](#download)
+- [Subdomain Integration](#subdomain-integration)
+- [Routes](#routes)
+- [Results](#results-resultsmywhooshcom)
+- [Shop](#shop-storemywhooshcom)
+- [Workout Builder](#workout-builder-workoutmywhooshcom)
+- [UCI Cycling Esports World Championships](#uci-cycling-esports-world-championships)
+- [Podcast](#podcast)
+- [Home Page Footer](#home-page-footer)
+- [Cross-Browser Compatibility](#cross-browser-compatibility)
+- [Accessibility](#accessibility)
+
 ---
 
 ## **Navigation**
 
 - [ ] All main menu items are clickable and lead to the correct page
 - [ ] Logo redirects to the homepage from any page
-- [ ] Footer links are present and functional
 - [ ] No broken links (404) are found in the main navigation
 - [ ] Navigation remains consistent across the main website
+
+> **Note:** Footer link verification is covered separately in the [Home Page Footer](#home-page-footer) section.
 
 ---
 
@@ -47,6 +64,17 @@
 
 ## **Subdomain Integration**
 
+MyWhoosh Web Ecosystem:
+
+- Main Website — `mywhoosh.com`
+- Results — `results.mywhoosh.com`
+- Shop — `store.mywhoosh.com`
+- Workout Builder — `workout.mywhoosh.com`
+- UCI CEWC — `uci.mywhoosh.com`
+- Authentication / User Account — `event.mywhoosh.com`
+
+Checks:
+
 - [ ] Navigation from `mywhoosh.com` to `store.mywhoosh.com` works correctly
 - [ ] Navigation from `mywhoosh.com` to `workout.mywhoosh.com` works correctly
 - [ ] Navigation from `mywhoosh.com` to `results.mywhoosh.com` works correctly
@@ -73,7 +101,7 @@
 
 ---
 
-## **Results**
+## **Results** (results.mywhoosh.com)
 
 ### Results List
 
@@ -87,7 +115,7 @@
 - [ ] "View Results" opens the corresponding event results page
 - [ ] Pagination navigation works correctly
 
-### *Event Results*
+### Event Results
 
 > **Note:** Due to the educational scope of this portfolio project, detailed functional verification was performed on one representative event results page.
 
@@ -346,8 +374,6 @@
 
 ## *Podcast*
 
-> *Note:* Verification of the footer, partner links, and social sharing services is outside the scope of this educational portfolio project and will be covered in separate checklists.
-
 ### *Podcast Landing*
 
 - [ ] Podcast page loads successfully
@@ -381,7 +407,7 @@
 - [ ] LinkedIn share link opens correctly
 - [ ] WhatsApp share link opens correctly
 
-> *Note:* Verification of additional sharing providers available through the "More" menu is outside the scope of this educational portfolio project.
+> *Note:* Verification of additional sharing providers available through the "More" menu is outside the scope of this educational portfolio project — only the main visible sharing options are checked.
 
 ---
 
