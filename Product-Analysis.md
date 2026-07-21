@@ -115,19 +115,19 @@ mywhoosh.com
 (Main Website)
 
 ├── results.mywhoosh.com
-   Results
+   **Results**
 
 ├── store.mywhoosh.com
-   Shop
+   **Shop**
 
 ├── workout.mywhoosh.com
-   Workout Builder
+   **Workout Builder**
 
 ├── uci.mywhoosh.com
-   UCI CEWC
+   **UCI CEWC**
 
 └── event.mywhoosh.com
-   Authentication / User Account
+   **Authentication / User Account**
 
 ---
 
