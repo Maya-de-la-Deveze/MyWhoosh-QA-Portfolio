@@ -109,12 +109,25 @@ Temporarily stores ride data server-side after crashes or unexpected disconnecti
 - About Us
 - Login
 
-### Separate Services
+### MyWhoosh Web Ecosystem
 
-- Shop (store.mywhoosh.com)
-- Workout Builder (workout.mywhoosh.com)
-- UCI CEWC (uci.mywhoosh.com)
-- Account & Login (event.mywhoosh.com)
+mywhoosh.com
+(Main Website)
+
+├── results.mywhoosh.com
+   Results
+
+├── store.mywhoosh.com
+   Shop
+
+├── workout.mywhoosh.com
+   Workout Builder
+
+├── uci.mywhoosh.com
+   UCI CEWC
+
+└── event.mywhoosh.com
+   Authentication / User Account
 
 ---
 
