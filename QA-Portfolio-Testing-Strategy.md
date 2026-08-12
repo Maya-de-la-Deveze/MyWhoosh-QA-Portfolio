@@ -42,6 +42,12 @@ The current scope includes:
 - Performance and load testing
 - Security penetration testing
 
+## Scope Freeze
+
+Note: A new Blog menu item appeared on the site after the initial test scope had been defined (226 test cases), replacing the previously existing Podcast item. As this is a learning and portfolio project with a fixed test scope rather than an ongoing production QA effort, the new Blog section was intentionally excluded from the test suite and is not covered by testing.
+
+Testing of newly introduced features falls outside the defined scope of this project. Therefore, the Blog section was not added to the existing test suite. Podcast-related test steps are skipped in subsequent test runs where the Podcast item is no longer available on the site.
+
 ---
 
 ## Testing Objectives
