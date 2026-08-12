@@ -104,39 +104,6 @@ Both **positive** (expected/valid input) and **negative** (invalid input, edge c
 | UI Consistency | UI Review (Checklist + Figma) |
 | UX Evaluation | UX Review (Figma) |
 
-## Tools & Deliverables
-
-| Purpose | Tool |
-|---|---|
-| Test case design & management | Qase |
-| Bug/defect tracking | Jira |
-| Task/progress tracking | Trello |
-| Browser inspection & debugging | Chrome DevTools |
-| UI review & annotation of visual defects | Figma |
-
-**Deliverables produced by this project:**
-- Test case suite
-- Bug reports (with steps to reproduce, expected vs. actual result, severity/priority)
-- Test summary report
-- Figma file with annotated UI issues: screenshots with markup/comments flagging visual bugs, plus "as-is vs. should-be" comparisons for key screens
-
----
-
-
-### Devices
-
-- Desktop
-- *(if mobile/responsive testing is performed, add: Chrome DevTools device emulation, or specific mobile device/browser)*
-
----
-
-## Assumptions & Limitations
-
-- Testing is limited to the publicly accessible MyWhoosh website; no access to staging/test environments or backend systems
-- Real payments and account-sensitive actions (e.g. subscription purchase) are not executed
-- Findings reflect the site's behaviour at the time of testing and may not remain accurate if the site is updated afterward
-- This is an independent learning project, not affiliated with or commissioned by MyWhoosh- Security penetration testing
-
 ---
 
 ## Testing Objectives
