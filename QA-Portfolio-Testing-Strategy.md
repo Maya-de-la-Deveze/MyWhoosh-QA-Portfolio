@@ -2,8 +2,6 @@
 
 ## QA Portfolio Testing Strategy
 
-*Last updated: 19 July 2026*
-
 ### Project Type
 
 **Independent QA Portfolio Project**
