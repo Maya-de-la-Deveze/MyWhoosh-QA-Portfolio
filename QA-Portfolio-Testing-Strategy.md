@@ -44,7 +44,10 @@ The current scope includes:
 
 **Scope Freeze:**
 
-Note: The menu item in this position was renamed multiple times after the initial test scope had been defined (226 test cases): "Podcast" → "Blog" → "MyWhoosh Hub". The latest rename to "MyWhoosh Hub" was observed during Firefox cross-browser testing within the same session.
+### Scope Freeze
+
+Note: The menu item in this position was renamed multiple times after the initial test scope had been defined (226 test cases): **"Podcast" → "Blog" → "MyWhoosh Hub"**. The latest rename to **"MyWhoosh Hub"** was observed during Firefox cross-browser testing within the same session.
+
 As this is a learning and portfolio project with a fixed test scope rather than an ongoing production QA effort, this item was intentionally excluded from the test suite and is not covered by testing.
 
 Testing of newly introduced or actively changing functionality falls outside the defined scope of this project. Therefore, the item was not added to the existing test suite. Podcast-related test steps are skipped in subsequent test runs because the original Podcast item is no longer available on the site in its original form.
