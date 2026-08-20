@@ -188,6 +188,85 @@ warning message).
 
 **Expected Result:** User is redirected to the registration page.
 
+---
+
+### 16. Maximum field length
+**Precondition:** User is on the login page.
+
+**Steps:**
+1. Enter a very long string (500+ characters) into the "Email Address" field.
+2. Enter a very long string (500+ characters) into the "Password" field.
+3. Check the reCAPTCHA checkbox.
+4. Click "Submit".
+   
+**Expected Result:** The form either limits input length gracefully or handles 
+the long input without breaking the layout or crashing; a clear validation 
+message is shown if the input is rejected.
+
+---
+
+### 17. Submit button state (enabled/disabled)
+**Precondition:** User is on the login page.
+
+**Steps:**
+1. Observe the "Submit" button before filling in any fields.
+2. Fill in "Email Address" and "Password" fields.
+3. Observe the "Submit" button state again.
+   
+**Expected Result:** The button's enabled/disabled behavior is consistent — either 
+active at all times, or disabled until required fields are filled, without 
+inconsistent or unexpected states.
+
+---
+
+### 18. Password paste via Ctrl+V
+**Precondition:** A password is copied to the clipboard.
+
+**Steps:**
+1. Click into the "Password" field.
+2. Paste the copied password using `Ctrl+V` (or `Cmd+V`).
+   
+**Expected Result:** The password is pasted correctly into the field and 
+displayed masked, same as manually typed input.
+
+---
+
+### 19. Browser autofill
+**Precondition:** Browser has previously saved login credentials for this site.
+
+**Steps:**
+1. Open the login page.
+2. Click into the "Email Address" field and select the browser's autofill 
+   suggestion (if offered).
+
+**Expected Result:** Email and password fields are correctly populated with 
+the saved credentials, without corruption or mismatched values.
+
+---
+
+### 20. Keyboard navigation (Tab key)
+**Precondition:** User is on the login page.
+
+**Steps:**
+1. Click into the "Email Address" field.
+2. Press `Tab` repeatedly to move through the form.
+   
+**Expected Result:** Focus moves through form elements in a logical order 
+(Email → Password → reCAPTCHA → Stay signed in → Submit, or similar), without 
+skipping elements or jumping unpredictably.
+
+---
+
+### 21. Double-click on Submit during form processing
+**Precondition:** Correct email and password are entered, reCAPTCHA is checked.
+
+**Steps:**
+1. Click "Submit" twice in quick succession.
+   
+**Expected Result:** The form is submitted only once; no duplicate login
+requests are sent, and no error or duplicate session results from the 
+double click.
+
 ## Out of Scope
 
 The following testing types are explicitly excluded from this project on ethical and 
