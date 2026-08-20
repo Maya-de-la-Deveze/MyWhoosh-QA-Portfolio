@@ -11,6 +11,7 @@
 - [Download](#download)
 - [Subdomain Integration](#subdomain-integration)
 - [Routes](#routes)
+- [Events](#events)
 - [Results](#results-resultsmywhooshcom)
 - [Shop](#shop-storemywhooshcom)
 - [Workout Builder](#workout-builder-workoutmywhooshcom)
@@ -100,6 +101,18 @@ Checks:
 - [ ] Routes can be viewed without authentication
 
 ---
+
+## **Events**
+
+**Scope note:** Only the `/events/` listing page is covered. Event detail pages (e.g. Register Now, Requirements) are out of scope for this project.
+
+- [ ] Event cards (time/date, image, title) all link to the same event detail page
+- [ ] Date, time, distance (km), and elevation (m) values on each card match the actual event and are not empty
+- [ ] Timezone (GMT+4) displays consistently regardless of browser locale
+- [ ] "Other Events / Ways To Ride" cards link to their correct respective pages
+
+---
+
 
 ## **Results** (results.mywhoosh.com)
 
