@@ -2,6 +2,7 @@
 
 ### 1. Login page elements display
 **Precondition:** User has opened the login page.
+
 **Steps:**
 1. Observe the login form.
 
@@ -13,6 +14,7 @@
 
 ### 2. Successful login with valid credentials
 **Precondition:** A registered, active user account exists.
+
 **Steps:**
 1. Enter a valid email into the "Email Address" field.
 2. Enter the correct password into the "Password" field.
@@ -26,6 +28,7 @@ or dashboard.
 
 ### 3. Password masking
 **Precondition:** User is on the login page.
+
 **Steps:**
 1. Enter characters into the "Password" field.
 
@@ -35,6 +38,7 @@ or dashboard.
 
 ### 4. Login via Enter key
 **Precondition:** Correct email and password are entered, reCAPTCHA is checked.
+
 **Steps:**
 1. Press the `Enter` key on the keyboard.
 
@@ -44,6 +48,7 @@ or dashboard.
 
 ### 5. Login with incorrect password
 **Precondition:** User is on the login page.
+
 **Steps:**
 1. Enter a valid email.
 2. Enter an incorrect password.
@@ -57,6 +62,7 @@ or dashboard.
 
 ### 6. Login with non-existent email
 **Precondition:** User is on the login page.
+
 **Steps:**
 1. Enter an email that does not exist in the database.
 2. Enter any password.
@@ -69,6 +75,7 @@ or dashboard.
 
 ### 7. Empty fields
 **Precondition:** User is on the login page.
+
 **Steps:**
 1. Leave the "Email Address" and "Password" fields empty.
 2. Click "Submit".
@@ -80,6 +87,7 @@ the required fields.
 
 ### 8. Invalid email format
 **Precondition:** User is on the login page.
+
 **Steps:**
 1. Enter text without an `@` symbol or domain into the "Email Address" field 
    (e.g. `testuser`).
@@ -92,6 +100,7 @@ the required fields.
 
 ### 9. Login attempt without completing reCAPTCHA
 **Precondition:** Correct email and password are entered.
+
 **Steps:**
 1. Enter a valid email.
 2. Enter the correct password.
@@ -105,6 +114,7 @@ verification is displayed.
 
 ### 10. Successful login with "Stay signed in" enabled
 **Precondition:** A registered, active user account exists.
+
 **Steps:**
 1. Enter a valid email.
 2. Enter the correct password.
@@ -121,6 +131,7 @@ directly without requiring re-authentication.
 
 ### 11. Email with leading/trailing spaces
 **Precondition:** A registered, active user account exists.
+
 **Steps:**
 1. Enter an email with a leading and/or trailing space (e.g. ` test@mail.com `).
 2. Enter the correct password.
@@ -134,6 +145,7 @@ a clear error message is shown rather than a silent failure).
 
 ### 12. Email case sensitivity
 **Precondition:** User is registered with a lowercase email (e.g. `test@mail.com`).
+
 **Steps:**
 1. Enter the same email in a different case (e.g. `Test@Mail.com`).
 2. Enter the correct password.
@@ -146,6 +158,7 @@ a clear error message is shown rather than a silent failure).
 
 ### 13. Multiple failed login attempts
 **Precondition:** User is on the login page.
+
 **Steps:**
 1. Enter a valid email and an incorrect password.
 2. Click "Submit".
@@ -159,6 +172,7 @@ warning message).
 
 ### 14. "Forgot Password?" link navigation
 **Precondition:** User is on the login page.
+
 **Steps:**
 1. Click the "Forgot Password?" link.
 
@@ -168,6 +182,7 @@ warning message).
 
 ### 15. "Create New Account?" link navigation
 **Precondition:** User is on the login page.
+
 **Steps:**
 1. Click the "Create New Account?" link.
 
