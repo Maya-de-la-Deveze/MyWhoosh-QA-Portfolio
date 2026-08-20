@@ -20,7 +20,7 @@ The documentation follows the same workflow a QA Engineer would typically use du
 - [Product Analysis](Product-Analysis.md)
 - [Checklists](Checklists.md) (in progress)
 - Test Cases (in progress)
-- Bug Reports (in progress)
+- [Bug Reports](Bug-Reports.md) (in progress)
 - UI Review (planned)
 - UX Review (planned)
 - Accessibility Review (planned)
