@@ -83,7 +83,7 @@ Both **positive** (expected/valid input) and **negative** (invalid input, edge c
 | Get Started (How It Works) | Checklist |
 | Download | Checklist |
 | Routes | Checklist |
-| Events | Test Cases |
+| Events | Checklist |
 | Results | Checklist |
 | Shop | Checklist |
 | Workout Builder | Checklist |
