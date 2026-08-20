@@ -4,6 +4,7 @@
 **Precondition:** User has opened the login page.
 **Steps:**
 1. Observe the login form.
+
 **Expected Result:** The following elements are displayed: "Email Address" and 
 "Password" fields, reCAPTCHA checkbox ("No soy un robot"), "Submit" button, 
 "Forgot Password?" link, "Stay signed in" checkbox, and "Create New Account?" link.
@@ -17,6 +18,7 @@
 2. Enter the correct password into the "Password" field.
 3. Check the reCAPTCHA checkbox.
 4. Click the "Submit" button.
+
 **Expected Result:** Login is successful; the user is redirected to the homepage 
 or dashboard.
 
@@ -26,6 +28,7 @@ or dashboard.
 **Precondition:** User is on the login page.
 **Steps:**
 1. Enter characters into the "Password" field.
+
 **Expected Result:** Characters are displayed as dots or asterisks.
 
 ---
@@ -34,6 +37,7 @@ or dashboard.
 **Precondition:** Correct email and password are entered, reCAPTCHA is checked.
 **Steps:**
 1. Press the `Enter` key on the keyboard.
+
 **Expected Result:** Login succeeds (same behavior as clicking "Submit").
 
 ---
@@ -45,6 +49,7 @@ or dashboard.
 2. Enter an incorrect password.
 3. Check the reCAPTCHA checkbox.
 4. Click "Submit".
+
 **Expected Result:** Login is rejected; an error message is displayed (e.g. 
 "Incorrect email or password").
 
@@ -57,6 +62,7 @@ or dashboard.
 2. Enter any password.
 3. Check the reCAPTCHA checkbox.
 4. Click "Submit".
+
 **Expected Result:** Login is rejected; an error message is displayed.
 
 ---
@@ -66,6 +72,7 @@ or dashboard.
 **Steps:**
 1. Leave the "Email Address" and "Password" fields empty.
 2. Click "Submit".
+
 **Expected Result:** Login is not performed; validation hints appear under 
 the required fields.
 
@@ -78,6 +85,7 @@ the required fields.
    (e.g. `testuser`).
 2. Fill in the "Password" field.
 3. Click "Submit".
+
 **Expected Result:** A warning about invalid input format is displayed.
 
 ---
@@ -89,6 +97,7 @@ the required fields.
 2. Enter the correct password.
 3. Do not check the reCAPTCHA checkbox.
 4. Click "Submit".
+
 **Expected Result:** Login is not performed; a message requiring reCAPTCHA 
 verification is displayed.
 
@@ -104,6 +113,7 @@ verification is displayed.
 5. Click "Submit".
 6. Close the page.
 7. Reopen the page.
+
 **Expected Result:** Login persists; on reopening, the dashboard is shown 
 directly without requiring re-authentication.
 
@@ -116,6 +126,7 @@ directly without requiring re-authentication.
 2. Enter the correct password.
 3. Check the reCAPTCHA checkbox.
 4. Click "Submit".
+
 **Expected Result:** Spaces are trimmed and login succeeds (or, if not trimmed, 
 a clear error message is shown rather than a silent failure).
 
@@ -128,6 +139,7 @@ a clear error message is shown rather than a silent failure).
 2. Enter the correct password.
 3. Check the reCAPTCHA checkbox.
 4. Click "Submit".
+
 **Expected Result:** Login succeeds — email case does not affect authentication.
 
 ---
@@ -138,6 +150,7 @@ a clear error message is shown rather than a silent failure).
 1. Enter a valid email and an incorrect password.
 2. Click "Submit".
 3. Repeat steps 1–2 several times in a row (e.g. 5 times).
+
 **Expected Result:** After a certain number of failed attempts, additional 
 protection is triggered (e.g. temporary lockout, additional captcha, or 
 warning message).
@@ -148,6 +161,7 @@ warning message).
 **Precondition:** User is on the login page.
 **Steps:**
 1. Click the "Forgot Password?" link.
+
 **Expected Result:** User is redirected to the password recovery page.
 
 ---
@@ -156,6 +170,7 @@ warning message).
 **Precondition:** User is on the login page.
 **Steps:**
 1. Click the "Create New Account?" link.
+
 **Expected Result:** User is redirected to the registration page.
 
 ## Out of Scope
