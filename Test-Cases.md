@@ -2,15 +2,17 @@
 
 Manual test cases for the MyWhoosh web application covering key user flows and related functional, validation, usability, accessibility scenarios.
 
-## [Login](#test-cases-login)
+## Contents
 
-## Registration - in progress
+- [Login](#test-cases-login)
+
+- Registration - in progress
 
 
 
-# Test Cases — Login
+## Test Cases — Login
 
-## 1. Login page elements display
+### 1. Login page elements display
 
 **Precondition:** User is on the login page.
 
