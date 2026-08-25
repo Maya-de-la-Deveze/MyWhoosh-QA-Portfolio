@@ -12,7 +12,7 @@ Manual test cases for the MyWhoosh web application covering key user flows and r
 
 ## Test Cases — Login
 
-### 1. Login page elements display
+## 1. Login page elements display
 
 **Precondition:** User is on the login page.
 
@@ -177,11 +177,26 @@ The login page displays the following elements:
 3. Complete the reCAPTCHA verification.
 4. Click the "Submit" button.
 
-**Expected Result:** The application handles leading and trailing spaces in the email address without causing an unexpected authentication or application error.
+**Expected Result:** Leading and trailing spaces are ignored, and the user is successfully authenticated.
 
 ---
 
-## 12. Email case sensitivity
+## 12. Email with spaces inside
+
+**Precondition:** User is on the login page.
+
+**Steps:**
+
+1. Enter an email address containing spaces inside the address (e.g., `test @mail.com`).
+2. Enter the correct password.
+3. Complete the reCAPTCHA verification.
+4. Click the "Submit" button.
+
+**Expected Result:** Login is not performed and an appropriate validation message is displayed indicating that the email address format is invalid.
+
+---
+
+## 13. Email case sensitivity
 
 **Precondition:** User is registered with an email address such as `test@mail.com`.
 
@@ -196,7 +211,7 @@ The login page displays the following elements:
 
 ---
 
-## 13. Multiple failed login attempts
+## 14. Multiple failed login attempts
 
 **Precondition:** User is on the login page.
 
@@ -211,7 +226,7 @@ The login page displays the following elements:
 
 ---
 
-## 14. "Forgot Password?" link navigation
+## 15. "Forgot Password?" link navigation
 
 **Precondition:** User is on the login page.
 
@@ -223,7 +238,7 @@ The login page displays the following elements:
 
 ---
 
-## 15. "Create New Account?" link navigation
+## 16. "Create New Account?" link navigation
 
 **Precondition:** User is on the login page.
 
@@ -235,22 +250,22 @@ The login page displays the following elements:
 
 ---
 
-## 16. Maximum field length
+## 17. Maximum password field length
 
 **Precondition:** User is on the login page.
 
 **Steps:**
 
-1. Enter an excessively long string (e.g., 500+ characters) into the "Email Address" field.
-2. Enter an excessively long string (e.g., 500+ characters) into the "Password" field.
+1. Enter an excessively long string (e.g., 500+ characters) into the "Password" field.
+2. Check how the field handles the input.
 3. Complete the reCAPTCHA verification.
 4. Click the "Submit" button.
 
-**Expected Result:** The application handles excessively long input gracefully without crashing, freezing, or breaking the page layout. If a maximum length is enforced, an appropriate validation message is displayed.
+**Expected Result:** The "Password" field handles excessively long input gracefully without breaking the page layout or causing the application to crash or freeze. If a maximum length is enforced, an appropriate validation message is displayed.
 
 ---
 
-## 17. Submit button state
+## 18. Submit button state
 
 **Precondition:** User is on the login page.
 
@@ -258,27 +273,33 @@ The login page displays the following elements:
 
 1. Check the initial state of the "Submit" button.
 2. Enter a valid email address.
-3. Enter a password.
-4. Check the state of the "Submit" button again.
+3. Check the state of the "Submit" button.
+4. Enter a valid password.
+5. Check the state of the "Submit" button.
+6. Complete the reCAPTCHA verification.
+7. Check the state of the "Submit" button.
 
-**Expected Result:** The "Submit" button behaves consistently according to the application's form validation rules.
+**Expected Result:** The "Submit" button changes its state according to the form validation requirements. Its state is consistent after entering the email, password, and completing the reCAPTCHA verification.
 
 ---
 
-## 18. Password paste
+## 19. Login with pasted password
 
-**Precondition:** A password is copied to the clipboard.
+**Precondition:** A registered, active user account exists and the correct password is copied to the clipboard.
 
 **Steps:**
 
-1. Click into the "Password" field.
-2. Paste the copied password using `Cmd+V`.
+1. Enter the registered email address into the "Email Address" field.
+2. Click into the "Password" field.
+3. Paste the copied password using `Cmd+V`.
+4. Complete the reCAPTCHA verification.
+5. Click the "Submit" button.
 
-**Expected Result:** The password is pasted correctly into the field and remains masked.
+**Expected Result:** The password is pasted correctly into the "Password" field, remains masked, and is accepted during authentication. The user is successfully logged in.
 
 ---
 
-## 19. Browser autofill
+## 20. Browser autofill
 
 **Precondition:** The browser has previously saved login credentials for the MyWhoosh website.
 
@@ -291,7 +312,7 @@ The login page displays the following elements:
 
 ---
 
-## 20. Keyboard navigation
+## 21. Keyboard navigation
 
 **Precondition:** User is on the login page.
 
@@ -304,7 +325,7 @@ The login page displays the following elements:
 
 ---
 
-## 21. Double-click on Submit
+## 22. Double-click on Submit
 
 **Precondition:** Valid email and password are entered and reCAPTCHA verification is completed.
 
@@ -313,23 +334,6 @@ The login page displays the following elements:
 1. Click the "Submit" button twice in quick succession.
 
 **Expected Result:** The login action is processed only once. No duplicate session, error, or unexpected behavior occurs.
-
----
-
-## 22. Error message clears after correcting credentials
-
-**Precondition:** User is on the login page.
-
-**Steps:**
-
-1. Enter a valid email address and an incorrect password.
-2. Complete the reCAPTCHA verification.
-3. Click the "Submit" button.
-4. Verify that an error message is displayed.
-5. Replace the incorrect password with the correct password.
-6. Submit the form again.
-
-**Expected Result:** The login succeeds and the previous login error is no longer displayed.
 
 ---
 
@@ -361,6 +365,8 @@ The login page displays the following elements:
 
 **Expected Result:** The password is processed according to the application's authentication rules. Leading and trailing spaces are not silently removed or modified.
 
+> **Note:** This test is not executable because a test account with a password containing leading and/or trailing spaces is not available.
+
 ---
 
 ## 25. reCAPTCHA failure or expiration
@@ -379,15 +385,24 @@ The login page displays the following elements:
 
 **Expected Result:** Login is not performed and the user is clearly informed that reCAPTCHA verification must be completed again.
 
-**Note:** Execution depends on the reCAPTCHA expiration behavior and may require an extended waiting period.
+> **Note:** Execution depends on the reCAPTCHA expiration behavior and may require an extended waiting period.
 
 ---
 
 ## 26. Login with inactive or disabled account
 
-**Status:** Not Executable
+**Precondition:** An inactive or disabled user account is required.
 
-**Reason:** Testing requires an inactive or disabled test account. No such account is available, and backend or staging environment access is outside the current test scope.
+**Steps:**
+
+1. Enter the email address of the inactive or disabled account.
+2. Enter the correct password.
+3. Complete the reCAPTCHA verification.
+4. Click the "Submit" button.
+
+**Expected Result:** Login is rejected and an appropriate message is displayed according to the account status.
+
+> **Note:** This test is not executable because an inactive or disabled test account is not available. Backend and staging environment access are outside the scope of this portfolio project.
 
 ---
 
@@ -406,19 +421,23 @@ The login page displays the following elements:
 
 ---
 
-## 28. Login with temporary network/server failure
+## 28. Login with network connection failure
 
-**Precondition:** User is on the login page and valid credentials are available.
+**Precondition:** User has valid login credentials.
 
 **Steps:**
 
-1. Enter a valid email address.
-2. Enter the correct password.
-3. Complete the reCAPTCHA verification.
-4. Open browser DevTools and set Network throttling to `Offline`.
-5. Click the "Submit" button.
+1. Clear the browser cache and cookies for the MyWhoosh website.
+2. Open the MyWhoosh login page.
+3. Enter a valid email address.
+4. Enter the correct password.
+5. Complete the reCAPTCHA verification.
+6. Open browser DevTools and set Network throttling to `Offline`.
+7. Click the "Submit" button.
 
-**Expected Result:** Login does not complete and an appropriate network error or retry message is displayed. The page remains usable and does not enter an unexpected or broken state.
+**Expected Result:** Login does not complete. An appropriate network error or retry message is displayed, and the login page remains usable without crashing or entering an unexpected state.
+
+---
 
 ## Out of Scope
 
