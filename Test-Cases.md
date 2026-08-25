@@ -12,7 +12,7 @@ Manual test cases for the MyWhoosh web application covering key user flows and r
 
 ## Test Cases — Login
 
-## 1. Login page elements display
+### 1. Login page elements display
 
 **Precondition:** User is on the login page.
 
@@ -36,7 +36,7 @@ The login page displays the following elements:
 
 ---
 
-## 2. Successful login with valid credentials
+### 2. Successful login with valid credentials
 
 **Precondition:** A registered, active user account exists.
 
@@ -51,7 +51,7 @@ The login page displays the following elements:
 
 ---
 
-## 3. Password masking
+### 3. Password masking
 
 **Precondition:** User is on the login page.
 
@@ -63,7 +63,7 @@ The login page displays the following elements:
 
 ---
 
-## 4. Login via Enter key
+### 4. Login via Enter key
 
 **Precondition:** Valid email and password are entered and reCAPTCHA verification is completed.
 
@@ -76,7 +76,7 @@ The login page displays the following elements:
 
 ---
 
-## 5. Login with incorrect password
+### 5. Login with incorrect password
 
 **Precondition:** User is on the login page.
 
@@ -91,7 +91,7 @@ The login page displays the following elements:
 
 ---
 
-## 6. Login with non-existent email
+### 6. Login with non-existent email
 
 **Precondition:** User is on the login page.
 
@@ -106,7 +106,7 @@ The login page displays the following elements:
 
 ---
 
-## 7. Empty required fields
+### 7. Empty required fields
 
 **Precondition:** User is on the login page.
 
@@ -119,7 +119,7 @@ The login page displays the following elements:
 
 ---
 
-## 8. Invalid email format
+### 8. Invalid email format
 
 **Precondition:** User is on the login page.
 
@@ -133,7 +133,7 @@ The login page displays the following elements:
 
 ---
 
-## 9. Login attempt without completing reCAPTCHA
+### 9. Login attempt without completing reCAPTCHA
 
 **Precondition:** Valid email and password are entered.
 
@@ -148,7 +148,7 @@ The login page displays the following elements:
 
 ---
 
-## 10. Successful login with "Stay signed in" enabled
+### 10. Successful login with "Stay signed in" enabled
 
 **Precondition:** A registered, active user account exists.
 
@@ -166,7 +166,7 @@ The login page displays the following elements:
 
 ---
 
-## 11. Email with leading/trailing spaces
+### 11. Email with leading/trailing spaces
 
 **Precondition:** A registered, active user account exists.
 
@@ -181,7 +181,7 @@ The login page displays the following elements:
 
 ---
 
-## 12. Email with spaces inside
+### 12. Email with spaces inside
 
 **Precondition:** User is on the login page.
 
@@ -196,7 +196,7 @@ The login page displays the following elements:
 
 ---
 
-## 13. Email case sensitivity
+### 13. Email case sensitivity
 
 **Precondition:** User is registered with an email address such as `test@mail.com`.
 
@@ -211,7 +211,7 @@ The login page displays the following elements:
 
 ---
 
-## 14. Multiple failed login attempts
+### 14. Multiple failed login attempts
 
 **Precondition:** User is on the login page.
 
@@ -226,7 +226,7 @@ The login page displays the following elements:
 
 ---
 
-## 15. "Forgot Password?" link navigation
+### 15. "Forgot Password?" link navigation
 
 **Precondition:** User is on the login page.
 
@@ -238,7 +238,7 @@ The login page displays the following elements:
 
 ---
 
-## 16. "Create New Account?" link navigation
+### 16. "Create New Account?" link navigation
 
 **Precondition:** User is on the login page.
 
@@ -250,7 +250,7 @@ The login page displays the following elements:
 
 ---
 
-## 17. Maximum password field length
+### 17. Maximum password field length
 
 **Precondition:** User is on the login page.
 
@@ -265,7 +265,7 @@ The login page displays the following elements:
 
 ---
 
-## 18. Submit button state
+### 18. Submit button state
 
 **Precondition:** User is on the login page.
 
@@ -283,7 +283,7 @@ The login page displays the following elements:
 
 ---
 
-## 19. Login with pasted password
+### 19. Login with pasted password
 
 **Precondition:** A registered, active user account exists and the correct password is copied to the clipboard.
 
@@ -299,7 +299,7 @@ The login page displays the following elements:
 
 ---
 
-## 20. Browser autofill
+### 20. Browser autofill
 
 **Precondition:** The browser has previously saved login credentials for the MyWhoosh website.
 
@@ -312,7 +312,7 @@ The login page displays the following elements:
 
 ---
 
-## 21. Keyboard navigation
+### 21. Keyboard navigation
 
 **Precondition:** User is on the login page.
 
@@ -325,7 +325,7 @@ The login page displays the following elements:
 
 ---
 
-## 22. Double-click on Submit
+### 22. Double-click on Submit
 
 **Precondition:** Valid email and password are entered and reCAPTCHA verification is completed.
 
@@ -337,7 +337,7 @@ The login page displays the following elements:
 
 ---
 
-## 23. Password containing special characters
+### 23. Password containing special characters
 
 **Precondition:** A registered, active user account exists with a password containing special characters.
 
@@ -352,7 +352,7 @@ The login page displays the following elements:
 
 ---
 
-## 24. Password containing leading/trailing spaces
+### 24. Password containing leading/trailing spaces
 
 **Precondition:** A registered, active user account exists and the account password is known to the tester.
 
@@ -369,7 +369,7 @@ The login page displays the following elements:
 
 ---
 
-## 25. reCAPTCHA failure or expiration
+### 25. reCAPTCHA failure or expiration
 
 **Status:** Additional / Potentially time-consuming
 
@@ -389,7 +389,7 @@ The login page displays the following elements:
 
 ---
 
-## 26. Login with inactive or disabled account
+### 26. Login with inactive or disabled account
 
 **Precondition:** An inactive or disabled user account is required.
 
@@ -406,7 +406,7 @@ The login page displays the following elements:
 
 ---
 
-## 27. Browser Back/Forward navigation after login
+### 27. Browser Back/Forward navigation after login
 
 **Precondition:** A registered, active user account exists.
 
@@ -421,7 +421,7 @@ The login page displays the following elements:
 
 ---
 
-## 28. Login with network connection failure
+### 28. Login with network connection failure
 
 **Precondition:** User has valid login credentials.
 
