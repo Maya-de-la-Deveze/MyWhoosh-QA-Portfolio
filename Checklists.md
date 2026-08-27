@@ -17,6 +17,7 @@
 - [Workout Builder](#workout-builder-workoutmywhooshcom)
 - [UCI Cycling Esports World Championships](#uci-cycling-esports-world-championships-ucimywhooshcom)
 - [Podcast](#podcast)
+- [About Us](#about-us)
 - [Home Page Footer](#home-page-footer)
 - [Cross-Browser Compatibility](#cross-browser-compatibility)
 - [Accessibility](#accessibility)
@@ -423,6 +424,28 @@ Checks:
 - [ ] WhatsApp share link opens correctly
 
 > *Note:* Verification of additional sharing providers available through the "More" menu is outside the scope of this educational portfolio project — only the main visible sharing options are checked.
+
+---
+
+## **About Us**
+
+- [ ] About Us dropdown opens on hover/click
+- [ ] "About MyWhoosh" link opens the correct page
+- [ ] "Leadership" link opens the correct page
+
+### *About MyWhoosh*
+
+- [ ] Page loads successfully without authentication
+- [ ] Hero image and heading are displayed correctly
+- [ ] "Get Started" CTA button navigates to the Get Started (How It Works) page
+- [ ] Page content displays without layout shifts or overlapping text
+- [ ] All images load correctly
+
+### *Leadership*
+
+- [ ] Page loads successfully without authentication
+- [ ] Leadership team member cards/photos are displayed
+- [ ] Content displays without layout issues
 
 ---
 
