@@ -28,6 +28,22 @@ The documentation follows the same workflow a QA Engineer would typically use du
 
 ---
 
+## How AI Was Used
+
+This project is my own work. I used an AI assistant (Claude) as a support tool, similar to a mentor or reviewer.
+
+**What I did myself:**
+- Chose the product and explored it as a real user (I use MyWhoosh for my own training and noticed the first bugs there)
+- Decided what to test and how to prioritize the checks
+- Reproduced the bugs and wrote the bug reports in Jira
+- Reviewed and verified everything published in this repository
+
+**Where AI helped:**
+- Improving the wording of the documentation in English
+- Technical tasks such as converting checklists into CSV for import into Qase
+
+---
+
 ## Project Status
 
 **In Progress**
