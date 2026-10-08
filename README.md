@@ -51,6 +51,7 @@ This project is my own work. I used an AI assistant (Claude) as a support tool, 
 
 ## Author
 Maya de la Deveze — Junior Manual QA · [LinkedIn](https://www.linkedin.com/in/maya-de-la-deveze)
+
 This is an independent learning project, not affiliated with or commissioned by MyWhoosh.
 
 
