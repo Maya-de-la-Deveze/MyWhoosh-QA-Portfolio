@@ -24,47 +24,57 @@
 
 ---
 
-## **Navigation**
+### **Navigation**
+
+*Execution: included in this cycle*
 
 - [ ] All main menu items are clickable and lead to the correct page
 - [ ] Logo redirects to the homepage from any page
 - [ ] No broken links (404) are found in the main navigation
-- [ ] Navigation remains consistent across the main website
+- [ ] Main menu items, their order and labels are the same on all main website pages
+- [ ] A non-existent URL shows a 404 page with a link back to the homepage
 
 > **Note:** Footer link verification is covered separately in the [Home Page Footer](#home-page-footer) section.
 
 ---
 
-> **Note:** Authentication flows (Login and Registration) and Event registration are covered by dedicated [Test Cases](Test-Cases.md) due to their validation rules and multi-step workflows.
+> **Note:** Authentication flows (Login and Registration) are covered by dedicated [Test Cases](Test-Cases.md) due to their validation rules and multi-step workflows.
 
 ---
-## **Get Started (How It Works)**
+### **Get Started (How It Works)**
 
-- [ ] Get Started page loads successfully
-- [ ] Platform download buttons navigate to the correct destination
-- [ ] Bike / Devices / Smart Trainer / Dictionary tabs switch content correctly
-- [ ] Content updates correctly when switching between tabs
-- [ ] Carousel navigation works correctly
-- [ ] Carousel displays all available slides
-- [ ] Partner logos are displayed
-- [ ] Partner logo links navigate to the correct external websites
-- [ ] External links open correctly
-- [ ] Page is accessible without authentication
+*Checks are performed without logging in.*
 
----
+*Execution: not executed in this cycle*
 
-## **Download**
-
-- [ ] All supported platforms are listed (iOS, Android, Windows, Windows HD, macOS, Apple TV, Link App iOS, Link App Android)
-- [ ] Desktop download buttons start downloading the correct installer
-- [ ] Mobile platform buttons redirect to the correct App Store or Google Play page
-- [ ] Download page is accessible without authentication
-- [ ] Download page displays correctly in tested desktop browsers
-
+- [ ] Get Started page loads and all sections are displayed (Get the App, The Essentials, Start Riding, What's New)
+- [ ] "Download App" buttons open the download page (/getting-started-mywhoosh-cycling-app/)
+- [ ] Each tab (Bike / Devices / Smart Trainer / Dictionary) shows its own content when selected
+- [ ] Carousel switches slides automatically
+- [ ] Carousel arrows move to the next and previous slide
+- [ ] Each carousel slide shows its image and text
+- [ ] Pagination indicators below the carousel switch between slides
+- [ ] Partner logos are displayed in their categories (Bikes, Garage Items, Trainers, Partners, Team Partners) without broken images
+- [ ] "View All" expands the full list of partners
+- [ ] Each partner logo opens the website of that partner
 
 ---
 
-## **Subdomain Integration**
+### **Download**
+
+*Execution: included in this cycle*
+
+*Checks are performed without logging in.*
+
+- [ ] All supported platforms are listed (iOS, Android, MyWhoosh (Windows), MyWhoosh HD (Windows), macOS, Apple TV, Link app iOS, Link app Android)
+- [ ] MyWhoosh, MyWhoosh HD and macOS buttons each start downloading their own installer
+- [ ] iOS, Apple TV and Link app iOS buttons open the MyWhoosh app page in the App Store; Android and Link app Android buttons open it in Google Play
+
+---
+
+### **Subdomain Integration**
+
+*Execution: included in this cycle*
 
 MyWhoosh Web Ecosystem:
 
@@ -77,14 +87,16 @@ MyWhoosh Web Ecosystem:
 
 Checks:
 
-- [ ] Navigation from `mywhoosh.com` to `store.mywhoosh.com` works correctly
-- [ ] Navigation from `mywhoosh.com` to `workout.mywhoosh.com` works correctly
-- [ ] Navigation from `mywhoosh.com` to `results.mywhoosh.com` works correctly
-- [ ] Navigation from `mywhoosh.com` to `uci.mywhoosh.com` works correctly
+- [ ] Shop menu item on `mywhoosh.com` opens `store.mywhoosh.com`
+- [ ] Workout Builder menu item on `mywhoosh.com` opens `workout.mywhoosh.com`
+- [ ] Results menu item on `mywhoosh.com` opens `results.mywhoosh.com`
+- [ ] UCI CEWC menu item on `mywhoosh.com` opens `uci.mywhoosh.com`
+- [ ] All subdomains open the same way from the main website (all in the same tab or all in a new tab)
 - [ ] Login redirects users to the `event.mywhoosh.com` authentication page when required
-- [ ] User session is handled correctly when navigating between subdomains
-- [ ] Browser Back button behaves correctly after switching between subdomains
-- [ ] Cross-subdomain links are functional
+- [ ] After logging in, the user stays logged in when moving to other subdomains that use the MyWhoosh account
+- [ ] After logging out, the user is logged out on all subdomains that use the MyWhoosh account
+- [ ] Browser Back returns the user to the previous page after moving between subdomains
+- [ ] Each subdomain has a working link back to `mywhoosh.com`
 
 ---
 
