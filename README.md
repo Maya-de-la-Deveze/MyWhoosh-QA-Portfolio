@@ -1,10 +1,12 @@
 # 🚴 MyWhoosh Website QA Portfolio
 
+
 An independent Manual QA portfolio project focused on evaluating the quality of the MyWhoosh website through structured software testing.
 
 ---
 
 ## About the Project
+
 
 This repository contains a QA portfolio project created as an independent case study.
 
@@ -15,6 +17,7 @@ The documentation follows the same workflow a QA Engineer would typically use du
 ---
 
 ## Project Documentation
+
 
 - [QA Portfolio Testing Strategy](QA-Portfolio-Testing-Strategy.md)
 - [Product Analysis](Product-Analysis.md)
@@ -30,11 +33,14 @@ The documentation follows the same workflow a QA Engineer would typically use du
 ---
 
 ## Tools
+
+
 Qase · Jira · GitHub · Chrome DevTools · Safari Web Inspector · axe DevTools · Lighthouse · VoiceOver · Figma
 
 ---
 
 ## How AI Was Used
+
 
 This project is my own work. I used an AI assistant (Claude) as a support tool, similar to a mentor or reviewer.
 
@@ -51,11 +57,14 @@ This project is my own work. I used an AI assistant (Claude) as a support tool, 
 ---
 
 ## Author
+
+
 Maya de la Deveze — Junior Manual QA · [LinkedIn](https://www.linkedin.com/in/maya-de-la-deveze)
 
 This is an independent learning project, not affiliated with or commissioned by MyWhoosh.
 
 
 ## Project Status
+
 
 **In Progress**
