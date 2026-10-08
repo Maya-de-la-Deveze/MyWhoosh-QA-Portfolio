@@ -2,14 +2,13 @@
 
 An independent Manual QA portfolio project focused on evaluating the quality of the MyWhoosh website through structured software testing.
 
+Status: In progress · Test runs planned
 ---
 
 ## About the Project
 
-This repository contains a complete QA portfolio project created as an independent case study.
-
+This repository contains a QA portfolio project created as an independent case study.
 The goal of the project is to demonstrate a structured approach to manual software testing using a real-world website.
-
 The documentation follows the same workflow a QA Engineer would typically use during the testing process, from planning and analysis to bug reporting and final reporting.
 
 ---
@@ -20,11 +19,17 @@ The documentation follows the same workflow a QA Engineer would typically use du
 - [Product Analysis](Product-Analysis.md)
 - [Checklists](Checklists.md)
 - [Test Cases](Test-Cases.md) (in progress)
+- Exploratory Testing (planned)
 - [Bug Reports](Bug-Reports.md) (in progress)
 - UI Review (planned)
 - UX Review (planned)
 - Accessibility Review (planned)
 - Final Test Report (planned)
+
+---
+
+## Tools
+Qase · Jira · GitHub · Chrome DevTools · Safari Web Inspector · axe DevTools · Lighthouse · VoiceOver · Figma
 
 ---
 
@@ -43,6 +48,11 @@ This project is my own work. I used an AI assistant (Claude) as a support tool, 
 - Technical tasks such as converting checklists into CSV for import into Qase
 
 ---
+
+## Author
+Maya de la Deveze — Junior Manual QA · [LinkedIn](https://www.linkedin.com/in/maya-de-la-deveze)
+This is an independent learning project, not affiliated with or commissioned by MyWhoosh.
+
 
 ## Project Status
 
