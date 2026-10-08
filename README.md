@@ -2,8 +2,6 @@
 
 An independent Manual QA portfolio project focused on evaluating the quality of the MyWhoosh website through structured software testing.
 
-Status: In progress · Test runs planned
-
 ---
 
 ## About the Project
