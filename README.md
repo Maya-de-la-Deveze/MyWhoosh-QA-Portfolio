@@ -8,7 +8,9 @@ Status: In progress · Test runs planned
 ## About the Project
 
 This repository contains a QA portfolio project created as an independent case study.
+
 The goal of the project is to demonstrate a structured approach to manual software testing using a real-world website.
+
 The documentation follows the same workflow a QA Engineer would typically use during the testing process, from planning and analysis to bug reporting and final reporting.
 
 ---
