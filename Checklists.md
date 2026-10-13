@@ -55,7 +55,7 @@
 - [ ] Each carousel slide shows its image and text
 - [ ] Pagination indicators below the carousel switch between slides
 - [ ] Partner logos are displayed in their categories (Bikes, Garage Items, Trainers, Partners, Team Partners) without broken images
-- [ ] "View All" expands the full list of partners
+- [ ] "View All" expands the full list of partners, and "View Less" collapses it
 - [ ] Each partner logo opens the website of that partner
 
 ---
@@ -100,223 +100,221 @@ Checks:
 
 ---
 
-## **Routes**
+### **Routes**
 
-- [ ] Routes page loads successfully
-- [ ] Each listed route opens its corresponding route page
-- [ ] Route title is displayed
-- [ ] Route description is displayed
-- [ ] Route distance is displayed
-- [ ] Route elevation is displayed
-- [ ] Route image is displayed
-- [ ] Partner logos are displayed on route pages
-- [ ] Partner logo links open the correct external websites
-- [ ] Routes can be viewed without authentication
+*Execution: not executed in this cycle*
 
----
+*Checks are performed without logging in.*
 
-## **Events**
+- [ ] Routes page shows the side menu with all destinations
+- [ ] Selecting a destination in the side menu shows its content and highlights it in the menu
+- [ ] Destination page shows its title, description and background image
+- [ ] Summary shows Total Routes, Total Distance (km) and Total Elevation Gain (m)
+- [ ] Total Routes equals the number of routes in the table
+- [ ] Total Distance and Total Elevation Gain equal the sums of the values in the table
+- [ ] Routes table lists each route with its name, distance (km) and elevation (m), with no empty cells
 
-**Scope note:** Only the `/events/` listing page is covered. Event detail pages (e.g. Register Now, Requirements) are out of scope for this project.
-
-- [ ] Event cards (time/date, image, title) all link to the same event detail page
-- [ ] Date, time, distance (km), and elevation (m) values on each card match the actual event and are not empty
-- [ ] Timezone (GMT+4) displays consistently regardless of browser locale
-- [ ] "Other Events / Ways To Ride" cards link to their correct respective pages
+> **Note:** The Official Partners block is shared across pages and is checked in [Get Started](#get-started-how-it-works)
 
 ---
 
+### **Events**
 
-## **Results** (results.mywhoosh.com)
+*Execution: not executed in this cycle*
 
-### Results List
+*Checks are performed without logging in.*
 
-- [ ] Results page loads without authentication
-- [ ] Gender switch (Men/Women) updates the displayed results
-- [ ] Event search returns relevant results
-- [ ] Empty search displays an appropriate message
-- [ ] Category filter updates the displayed events
-- [ ] Date filter updates the displayed events
-- [ ] Event cards display required information
-- [ ] "View Results" opens the corresponding event results page
-- [ ] Pagination navigation works correctly
+**Scope note:** Only the `/events/` listing page is covered. Event detail pages are opened only to verify card links and data; their functionality (e.g. Register Now, Requirements) is out of scope for this project.
 
-### Event Results
-
-> **Note:** Due to the educational scope of this portfolio project, detailed functional verification was performed on one representative event results page.
-
-- [ ] Event results page loads successfully
-- [ ] Event title is displayed
-- [ ] Ranking tabs (Individual, Master, Youth, GCC, Teams, Sprint Winner, King of the Mountain) switch correctly
-- [ ] Player search returns relevant results
-- [ ] Empty player search displays an appropriate message
-- [ ] Category filter updates the displayed results
-- [ ] Day selector updates the displayed results
-- [ ] Reset button clears all applied filters
-- [ ] Ranking table displays participant information correctly
-- [ ] Pagination navigation works correctly
-- [ ] Filters work correctly when used in combination
+- [ ] Event card elements (date, image, title, "Explore") all open the detail page of the same event (the page title matches the card title)
+- [ ] Date, time, distance (km), and elevation (m) on each card match the event detail page and are not empty
+- [ ] Upcoming events are listed in date order
+- [ ] Event times are shown in GMT+4 regardless of the computer's time zone and browser language
+- [ ] Each "Other Events / Ways To Ride" card shows its image, title and description
 
 ---
 
-> **Note:** UI consistency and UX evaluation are documented separately in the Figma-based [UI Review](UI-Review.md) and [UX Review](UX-Review.md).
+### **Results** (results.mywhoosh.com)
+
+*Execution: included in this cycle*
+
+*Checks are performed without logging in.*
+
+#### Results List
+
+*The main Results page with the list of all past events.*
+
+- [ ] Selecting Men or Women shows only events of that gender (events marked "Both" are shown in each)
+- [ ] Searching by the full name of an existing event returns that event
+- [ ] A search with no matches shows the "No Events Found" message
+- [ ] Selecting a category (Open, Category 1–4) shows only events that include that category (verified on the event results page)
+- [ ] Selecting a date range shows only events within that range
+- [ ] Selecting a date range with no events shows the "No Events Found" message
+- [ ] Gender, search, category and date applied together show only events that match all of them
+- [ ] "Reset" clears all filters and the search field and shows all events again
+- [ ] All Events are listed from newest to oldest
+- [ ] Each event card shows date, time, image, location, title, distance, elevation, number of players, gender and Official/Unofficial status
+- [ ] Multi-stage event tabs (Overall, Stage 1, Stage 2) show the data of the selected stage
+- [ ] "View Results" opens the results page of the same event (the page title matches the card title)
+- [ ] Pagination shows different events on each page without duplicates, and "Next" opens the next page
+
+#### Event Results
+
+*The results table of a single event, opened via "View Results".*
+
+> **Note:** Checks are performed on one representative event results page.
+
+- [ ] Event date, distance and elevation at the top of the page match the event card in the Results list
+- [ ] "Overall" tab is selected by default and shows the overall ranking
+- [ ] Selecting a day (Day - 1, Day - 2) shows the results of that day
+- [ ] After a day is selected, the Checkpoint 1–4 and Finish Line buttons each show the ranking at that checkpoint
+- [ ] Selecting a category (Category - 1 to Category - 6) shows only participants of that category
+- [ ] Typing in the category and day dropdowns filters their options
+- [ ] Searching by the full name of a participant shows that participant
+- [ ] A participant search with no matches shows an empty-state message
+- [ ] Day, category and search applied together show only participants that match all of them
+- [ ] Reset clears the day, category and search and shows the overall ranking again
+- [ ] Rank numbers are sequential (1, 2, 3…) without gaps or duplicates
+- [ ] In the Overall tab, participants are ordered by points from highest to lowest
+- [ ] Each row shows rank, name, country flag, team, Avg (W/kg), Avg (W), Avg (HR), points and prize money
+- [ ] Changing "Rows per page" changes the number of rows shown
+- [ ] With more participants than rows per page, each page shows different participants without duplicates
 
 ---
 
-## **Shop** (store.mywhoosh.com)
+### **Shop** (store.mywhoosh.com)
 
-### *Landing Page*
+*Execution: partially included — see subsections*
 
-#### Header
+*Checks are performed without logging in, unless stated otherwise.*
 
-- [ ] Home link opens the Home page
-- [ ] Shop link opens the Shop page
-- [ ] Contact link opens the Contact page
-- [ ] Logo redirects to the Home page
-- [ ] Search opens the search function
-- [ ] Wishlist opens the Wishlist page
-- [ ] Account opens the login/account page
+#### *Shop Home Page*
 
+*Execution: not executed in this cycle*
 
-#### Hero Section
+- [ ] Header links Home, Shop and Contact Us open their pages
+- [ ] Logo opens the Shop Home page
+- [ ] Hero slider switches slides automatically and with the arrows
+- [ ] "Shop Collection" button opens the Shop page
+- [ ] Category cards (Active Wear, Jersey, Mug, Shirts) open their category pages
+- [ ] "Women's Clothing" and "Men's Clothing" banners open their collection pages
+- [ ] "Men's Jersey" and "Women's Jersey" banners open their product pages
+- [ ] Product cards in Featured Product and Top Rating open their product pages
+- [ ] Footer links open the corresponding pages
+- [ ] "Back to top" button scrolls the page to the top
 
-- [ ] Shop Collection button opens the Shop page
+#### *Shop Page*
 
+*Execution: not executed in this cycle*
 
-#### Products Carousel
+- [ ] Category circles (Accessories, Active Wear, Bag, Bottles) open their category pages
+- [ ] Each category in the Categories sidebar shows only products of that category
+- [ ] The number next to each category matches the number of products shown when it is opened
+- [ ] "Showing X–Y of Z item(s)" matches the products on the page and the total number of products
+- [ ] "Sort by price: low to high" and "Sort by price: high to low" order products by price correctly
+- [ ] "Sort by average rating" shows products with a higher rating first
+- [ ] The selected sort order is kept when moving to the next page
+- [ ] View mode buttons switch between the 2-, 3- and 4-column grids and the list layout
+- [ ] Pagination shows different products on each page without duplicates
+- [ ] Product cards open their product pages
 
-- [ ] Product cards open the corresponding product pages
+#### *Product Page*
 
+*Execution: included in this cycle*
 
-#### Collections
+- [ ] Breadcrumbs and category links open the corresponding category pages
+- [ ] Thumbnails and arrows switch the main product image
+- [ ] Product name, price, short description and the Description tab are displayed
+- [ ] Color, Size and HS Code options can be selected
+- [ ] After all options are selected, the stock quantity is shown (e.g. "11 in stock")
+- [ ] "Add to Cart" and "Buy It Now" become active only after all options are selected
+- [ ] Quantity "+" increases the quantity by 1; "−" decreases it by 1 and does not go below 1
 
-- [ ] Men Collection card opens the Men's collection page
-- [ ] Women Collection card opens the Women's collection page
+#### *Cart Icon and Mini Cart*
 
+*Execution: included in this cycle*
 
-#### Featured Products
+- [ ] The cart counter shows the total quantity of products in the cart
+- [ ] The cart counter is the same on all Shop pages (Shop Home, Shop, product page, Cart)
+- [ ] An empty Mini Cart shows "No products in the cart.", and "Go to shop" opens the Shop page
+- [ ] Each Mini Cart item shows image, name, color, size, HS Code, quantity and unit price
+- [ ] The Mini Cart total equals the sum of unit price × quantity
+- [ ] "View Cart" opens the Cart page
+- [ ] The × button removes the product from the Mini Cart
 
-- [ ] Featured Product cards open the corresponding product pages
+#### *Cart Page*
 
+*Execution: included in this cycle*
 
-#### Jerseys
+- [ ] The "Shopping Cart" tab shows the number of items in the cart, e.g. "Shopping Cart (2)"
+- [ ] Each row shows image, name, color, size, HS Code, price, quantity and subtotal
+- [ ] Row subtotal equals price × quantity
+- [ ] Subtotal in Cart totals equals the sum of row subtotals
+- [ ] VAT equals 5% of the Subtotal (UAE VAT rate)
+- [ ] Total equals Subtotal + VAT
+- [ ] "Continue Shopping" opens the Shop page
+- [ ] "Order Tracking" tab opens the Order Tracking page
 
-- [ ] Men's Jersey card opens the corresponding product page
-- [ ] Women's Jersey card opens the corresponding product page
+> **Note:** Adding products, changing quantity, Update Cart, removing products and keeping the cart after login are covered by test cases TC-SHOP (in progress). Cart state persistence is covered by exploratory sessions ES-01 – ES-04.
 
+#### *Checkout*
 
-#### Top Rating
+*Execution: included in this cycle*
 
-- [ ] Top Rating product cards open the corresponding product pages
+- [ ] For a guest, "Proceed to Checkout", the Mini Cart "Check Out" button and the "Checkout" tab show "Login Required" with a "Go To Login" button
 
+> **Note:** Payment and order placement are out of scope for this portfolio project. The Checkout page for logged-in users is not tested, and no orders are placed.
 
-#### Footer
+#### *Order Tracking*
 
-- [ ] Footer links navigate to the correct pages
+*Execution: not executed in this cycle*
 
+- [ ] Submitting with empty Order ID and Billing Email shows validation messages
+- [ ] Submitting an invalid email format shows a validation message
+- [ ] Submitting a non-existent Order ID shows an error message
 
-### *Categories*
+> **Note:** Tracking a real order requires an existing order, which is out of scope for this portfolio project.
 
-- [ ] Product categories can be opened
-- [ ] Activewear category opens correctly
-- [ ] Clothing category opens correctly
-- [ ] Women category opens correctly
-- [ ] Men category opens correctly
-- [ ] Switching between categories updates the product list
+#### *Search*
 
-### *Product Page*
+*Execution: included in this cycle*
 
-- [ ] Product page opens successfully
-- [ ] Product color can be selected
-- [ ] Product size can be selected
-- [ ] HS Code can be selected
-- [ ] Product availability is updated after selecting the required options
-- [ ] Product quantity can be increased
-- [ ] Product quantity can be decreased
-- [ ] Add to Cart button adds the product to the cart
-- [ ] Buy It Now button proceeds to the checkout flow
-- [ ] Add to Wishlist button adds the product to the wishlist
-- [ ] Product category links open the corresponding category pages
-- [ ] Product description section is displayed
-- [ ] Facebook button redirects to the Facebook authorization/login page
-- [ ] Twitter/X button redirects to the Twitter/X authorization/login page
+- [ ] Search icon opens the search panel, and "Close" closes it
+- [ ] Results appear while typing and update with each character
+- [ ] The character counter shows the number of characters entered (e.g. "2/50 characters")
+- [ ] The search field does not accept more than 50 characters
+- [ ] Searching by the full name of an existing product returns that product
+- [ ] A search with no matches shows an empty-state message
+- [ ] Each search result opens its product page
 
-### *Shopping Cart Functionality*
+#### *Wishlist*
 
-#### Shopping Cart Icon
+*Execution: included in this cycle*
 
-- [ ] Shopping Cart counter is updated after adding a product
-- [ ] Shopping Cart counter displays the correct number of products across all pages
-- [ ] Clicking the Shopping Cart icon opens the Mini Cart
+- [ ] An empty Wishlist shows "There are no products on the Wishlist!"
+- [ ] "Add to Wishlist" on the product page adds the product, and the wishlist counter increases by 1
+- [ ] The heart icon on a product card on the Shop page adds the product to the Wishlist
+- [ ] Each Wishlist item shows image, name, price, date added and stock status
+- [ ] The × button removes the product, and the wishlist counter decreases by 1
+- [ ] "Copy" copies the wishlist link to the clipboard
+- [ ] The wishlist link opened in a private window shows the same products
 
-#### Mini Cart
+#### *Account*
 
-- [ ] Added product is displayed in the Mini Cart
-- [ ] Selected product color is displayed
-- [ ] Selected product size is displayed
-- [ ] Selected HS Code is displayed
-- [ ] Product quantity is displayed correctly
-- [ ] Product unit price is displayed correctly
-- [ ] Total price is calculated correctly
-- [ ] View Cart button opens the Shopping Cart page
-- [ ] Checkout button redirects unauthenticated users to the login/registration page
-- [ ] Shopping Cart tab opens the Shopping Cart page
-- [ ] Checkout tab redirects unauthenticated users to the login/registration page
-- [ ] Order Tracking tab opens the Order Tracking page
+*Execution: included in this cycle*
 
-#### Shopping Cart Page
-
-- [ ] Shopping Cart page opens successfully
-- [ ] Added product is displayed in the shopping cart
-- [ ] Selected product color is displayed
-- [ ] Selected product size is displayed
-- [ ] Selected HS Code is displayed
-- [ ] Product unit price is displayed correctly
-- [ ] Product quantity can be increased
-- [ ] Product quantity can be decreased
-- [ ] Product subtotal is updated after changing the quantity
-- [ ] Update Cart recalculates the cart total
-- [ ] Product can be removed from the shopping cart
-- [ ] Empty cart message is displayed after removing all products
-
----
-
-### *Checkout*
-
-- [ ] Proceed to Checkout redirects unauthenticated users to the login/registration page
-- [ ] Apple Pay button opens the Apple Pay authorization flow
-- [ ] Google Pay button opens the Google Pay authorization flow
-
-> **Note:** Payment authorization and order placement are out of scope for this portfolio project.
-
----
-
-### *Order Tracking*
-
-- [ ] Order Tracking page opens successfully
-- [ ] Order ID field accepts input
-- [ ] Billing Email field accepts input
-- [ ] Submit button submits the form
-- [ ] Validation is displayed for empty required fields
-
-> **Note:** Full order tracking verification requires an existing order, which is out of scope for this portfolio project.
-
----
-
-### *Search*
-- [ ] Search returns relevant products
-- [ ] Empty search displays an appropriate message
-
-### *Wishlist*
-- [ ] Wishlist requires authentication
-- [ ] Unauthenticated users are redirected to the login page
-
-### *Account*
-- [ ] Account page requires authentication
-- [ ] Unauthenticated users are redirected to the login page
-- [ ] Authenticated users can access the Account page
+- [ ] For a guest, the Account icon opens the MyWhoosh Sign In page
+- [ ] After logging in, the Account icon opens the account page
 
 > **Note:** Purchase history verification is out of scope for this portfolio project.
+
+#### *Contact*
+
+*Execution: included in this cycle*
+
+- [ ] Contact page shows the map and the contact form (Full Name, Email Address, Subject, Message, reCAPTCHA, Submit)
+
+> **Note:** Contact form validation is covered by test cases TC-CONTACT. Valid messages are not submitted, as they would reach the real MyWhoosh support team.
 
 ---
 
