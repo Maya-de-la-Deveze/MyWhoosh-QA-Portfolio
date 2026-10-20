@@ -21,6 +21,7 @@
 - [Home Page Footer](#home-page-footer)
 - [Cross-Browser Compatibility](#cross-browser-compatibility)
 - [Accessibility](#accessibility)
+- [Mobile Web](#mobile-web)
 
 ---
 
@@ -318,89 +319,69 @@ Checks:
 
 ---
 
+### **Workout Builder** (workout.mywhoosh.com)
 
-## **Workout Builder** (workout.mywhoosh.com)
+*Execution: included in this cycle*
 
-- [ ] Unauthenticated users are redirected to the Login page
-- [ ] After successful login, users return to the originally requested page
-- [ ] Workouts section loads correctly for authenticated users
-- [ ] My Training Plans section loads correctly
-- [ ] Marketplace section loads correctly
-- [ ] Subscriptions section loads correctly
-- [ ] Visual style is consistent with the main website
+- [ ] Without logging in, the Workout Builder page opens and shows the Workouts, My Training Plans, MarketPlace and Subscriptions cards
+- [ ] For a guest, "Explore" and "See Plans" open the MyWhoosh Sign In page
+- [ ] Browser Back from the Sign In page returns the guest to the Workout Builder page
+- [ ] Opening any section directly by URL without logging in shows a login prompt
+- [ ] After logging in, the user is returned to the section that was requested
+- [ ] For a logged-in user, each card opens its own section (Workouts, My Training Plans, MarketPlace, Subscriptions)
 
----
-
-## **UCI Cycling Esports World Championships** (uci.mywhoosh.com)
-
-
-### *Header Navigation*
-
-- [ ] 2025 UCI CEWC page opens correctly
-- [ ] Explore Abu Dhabi page opens correctly
-- [ ] Event Details page opens correctly
-- [ ] Event Gallery page opens correctly
-- [ ] Results page opens correctly
-- [ ] Watch Replay button opens the replay page
-
-
-### *Hero Section*
-
-- [ ] Event date and time are displayed
-- [ ] Event location is displayed
-- [ ] Explore button opens the Explore Abu Dhabi page
-
-
-### *Latest Results*
-
-- [ ] Final tab displays the Final results
-- [ ] Semi Final tab displays the Semi Final results
-- [ ] Men tab displays the Men's results
-- [ ] Women tab displays the Women's results
-- [ ] View Full Results button opens the Results page
-
-
-### *Latest Updates*
-
-- [ ] Latest Updates section is displayed
-- [ ] Timeline items are displayed
-
-
-### *Social Media*
-
-- [ ] Facebook link opens the official Facebook page
-- [ ] LinkedIn link opens the official LinkedIn page
-- [ ] Instagram link opens the official Instagram page
-- [ ] X (Twitter) link opens the official X page
-- [ ] YouTube link opens the official YouTube channel
-- [ ] Strava link opens the official Strava page
-- [ ] Twitch link opens the official Twitch channel
-
-
-### *Download*
-
-- [ ] Download Now button opens the download page
-
-
-### *Partners*
-
-- [ ] Shimano logo opens the partner website
-- [ ] Tissot logo opens the partner website
-- [ ] Santini logo opens the partner website
-
-
-### *Footer*
-
-- [ ] FAQ page opens correctly
-- [ ] Contact Us page opens correctly
+> **Note:** Creating, editing or buying workouts, training plans and subscriptions is out of scope for this portfolio project.
 
 ---
 
-## *Podcast*
+### **UCI Cycling Esports World Championships** (uci.mywhoosh.com)
 
-> *Note:* Verification of the footer, partner links, and social sharing services is outside the scope of this educational portfolio project and will be covered in separate checklists.
+*Execution: not executed in this cycle*
 
-### *Podcast Landing*
+> **Note:** The page content changes with each championship (currently the 2026 UCI CEWC). Checks describe the page structure, not the content of a specific event.
+
+#### *Header Navigation*
+
+- [ ] "2026 UCI CEWC", "Event Details", "Event Gallery" and "Results" open their pages
+- [ ] The highlighted button next to the menu (currently "Watch Semi-Final Recap Here") opens the Event Gallery page
+
+#### *Hero Section*
+
+- [ ] Event date and location are displayed
+- [ ] "Explore" button opens the 2026 UCI CEWC page
+
+#### *Latest Results*
+
+- [ ] Latest Results shows the latest available results, or "Will be updated soon!" if there are none yet
+
+#### *Latest Updates*
+
+- [ ] Latest Updates shows timeline items from newest to oldest, each with its time and text
+
+#### *Event Gallery*
+
+- [ ] Event Gallery tabs (Live Coverage, Video Gallery, Image Gallery, Interviews) each show their own content
+
+#### *Social Media and Download*
+
+- [ ] Each social media icon (Facebook, LinkedIn, Instagram, X, YouTube, Strava, Twitch) opens the official page on that network
+- [ ] "Download Now" opens the Download page
+
+#### *Partners and Footer*
+
+- [ ] Each UCI Official Partner logo (Shimano, Tissot, Santini) opens the partner's website
+- [ ] Footer links FAQ and Contact us open their pages
+
+---
+### *Podcast*
+
+*Execution: not executed — frozen baseline, see [Scope Freeze](QA-Portfolio-Testing-Strategy.md#scope-freeze)*
+
+> **Note:** This checklist was written when "Podcast" was an item of the main menu. The menu item in this position later changed ("Podcast" → "Blog" → "MyWhoosh Hub"); "Blog" and "MyWhoosh Hub" open the same page. The Podcast page itself still exists and is linked from the footer and from the headers of some subdomains. The checklist is kept as a frozen baseline and is not executed.
+
+> *Note:* Verification of the footer and partner links is outside the scope of this educational portfolio project and will be covered in separate checklists.
+
+#### *Podcast Landing*
 
 - [ ] Podcast page loads successfully
 - [ ] Podcast subscription links are displayed
@@ -409,14 +390,14 @@ Checks:
 - [ ] YouTube link opens the official podcast page
 
 
-### *Episode Links*
+#### *Episode Links*
 
 - [ ] Apple Podcasts link opens the episode on Apple Podcasts
 - [ ] Spotify link opens the episode on Spotify
 - [ ] YouTube link opens the episode on YouTube
 
 
-### *Episodes*
+#### *Episodes*
 
 - [ ] Featured episode is displayed
 - [ ] Episode list is displayed
@@ -425,7 +406,7 @@ Checks:
 - [ ] Episode description is displayed
 
 
-### *Share*
+#### *Share*
 
 - [ ] Share buttons are displayed
 - [ ] Facebook share link opens correctly
@@ -437,86 +418,100 @@ Checks:
 
 ---
 
-## **About Us**
+### **About Us**
 
-- [ ] About Us dropdown opens on hover/click
-- [ ] "About MyWhoosh" link opens the correct page
-- [ ] "Leadership" link opens the correct page
+*Execution: not executed in this cycle*
 
-### *About MyWhoosh*
+*Checks are performed without logging in.*
 
-- [ ] Page loads successfully without authentication
-- [ ] Hero image and heading are displayed correctly
-- [ ] "Get Started" CTA button navigates to the Get Started (How It Works) page
-- [ ] Page content displays without layout shifts or overlapping text
-- [ ] All images load correctly
+- [ ] Hovering over the About Us menu item opens a dropdown with "About MyWhoosh" and "Leadership"
+- [ ] "About MyWhoosh" and "Leadership" open their pages
 
-### *Leadership*
+#### *About MyWhoosh*
 
-- [ ] Page loads successfully without authentication
-- [ ] Leadership team member cards/photos are displayed
-- [ ] Content displays without layout issues
+- [ ] The page shows the "About MyWhoosh" heading and the Mission and Vision sections
+- [ ] "Get Started" button opens the Get Started (How It Works) page
 
----
+#### *Leadership*
 
-## *Home Page Footer*
+- [ ] The page shows the message from the CEO with the CEO's name and title
+- [ ] Board Members section lists each member with name and role
 
-- [ ] Footer is displayed on the Home page
-
-### *Brand Information*
-
-- [ ] MyWhoosh logo redirects to the Home page
-- [ ] Email link opens the default email client
-
-### *Navigation*
-
-- [ ] Get Started page opens correctly
-- [ ] About Us page opens correctly
-- [ ] Download App page opens correctly
-- [ ] Routes page opens correctly
-- [ ] Ruleset page opens correctly
-- [ ] Careers page opens correctly
-- [ ] Terms and Conditions page opens correctly
-- [ ] Troubleshoot page opens correctly
-
-### *Community*
-
-- [ ] Events page opens correctly
-- [ ] Blog page opens correctly
-- [ ] Results page opens correctly
-- [ ] Media page opens correctly
-- [ ] Teams page opens correctly
-- [ ] Contact Us page opens correctly
-- [ ] Support page opens correctly
-- [ ] Privacy Notice page opens correctly
-- [ ] Cookie Settings dialog opens correctly
-
-### *Social Media*
-
-- [ ] Facebook link opens the official Facebook page
-- [ ] X (Twitter) link opens the official X page
-- [ ] LinkedIn link opens the official LinkedIn page
-- [ ] Instagram link opens the official Instagram page
-- [ ] YouTube link opens the official YouTube channel
-- [ ] Strava link opens the official Strava page
-- [ ] Twitch link opens the official Twitch channel
-- [ ] Discord link opens the official Discord server
+> **Note:** The Official Partners block is checked in [Get Started](#get-started-how-it-works). Page layout and images are evaluated in the UI Review.
 
 ---
 
-## **Cross-Browser Compatibility**
+### *Home Page Footer*
 
-- [ ] Website loads successfully in supported desktop browsers
-- [ ] Navigation functions correctly in supported desktop browsers
-- [ ] Download page functions correctly in supported desktop browsers
-- [ ] No major visual differences are observed between supported desktop browsers
+*Execution: not executed in this cycle*
+
+*Checks are performed without logging in.*
+
+> **Note:** These checks cover the footer of the main website (mywhoosh.com) only. Subdomains (event., results., store., workout., uci.) use different footers; the differences are documented as UI/UX observations for the UI Review.
+
+#### *Brand Information*
+
+- [ ] MyWhoosh logo opens the Home page
+- [ ] The email link (support@mywhoosh.com) opens the default email client with the address filled in
+
+#### *Navigation*
+
+- [ ] Each link in the Navigation column (Get Started, About Us, Download App, Routes, Results, Careers, Terms and Conditions, Troubleshoot) opens its page
+
+#### *Community*
+
+- [ ] Each link in the Community column (Events, Podcast, Media, Teams, Contact Us, Support, Privacy Notice) opens its page
+- [ ] "Cookie Settings" opens the cookie settings dialog
+
+#### *Social Media*
+
+- [ ] Each social media icon (Facebook, X, LinkedIn, Instagram, YouTube, Strava, Twitch, Discord) opens the official MyWhoosh page on that network
 
 ---
 
-## **Accessibility**
+### **Cross-Browser Compatibility**
 
-- [ ] Images include alternative text where appropriate
-- [ ] Interactive elements are accessible using keyboard navigation
-- [ ] Form fields have associated labels
-- [ ] Text and interactive elements have sufficient color contrast
-- [ ] Visible focus indicators are displayed during keyboard navigation
+*Execution: included in this cycle*
+
+> **Note:** Chrome and Safari on macOS (Tier 1) run the full execution scope. This section is the smoke set for Firefox on macOS (Tier 2), compared with Chrome. Mobile checks on iPhone are covered in [Mobile Web](#mobile-web).
+
+- [ ] Home page loads with all blocks displayed, and main menu items open their pages
+- [ ] Login with valid credentials succeeds, and the user stays logged in on workout.mywhoosh.com
+- [ ] Download page buttons start the download or open the correct app store page
+- [ ] In the Shop, a product with all options selected can be added to the cart, and the cart counter updates
+- [ ] Fonts, spacing, images and alignment on the Home, Results and Shop pages look the same as in Chrome
+
+---
+
+### **Accessibility**
+
+*Execution: included in this cycle*
+
+> **Note:** Checks are performed on the Login and Download pages against WCAG 2.2 Level AA, using axe DevTools, Lighthouse and macOS VoiceOver with Safari. Findings are summarised in the Accessibility Review.
+
+- [ ] All interactive elements can be reached and used with the keyboard only (Tab, Shift+Tab, Enter, Space)
+- [ ] A visible focus indicator is shown on every focused element
+- [ ] Form fields have labels that VoiceOver announces (e.g. "Email Address, text field")
+- [ ] Form errors are shown as text, not only by colour, and VoiceOver announces them
+- [ ] Informative images have meaningful alternative text; decorative images are ignored by VoiceOver
+- [ ] Text contrast is at least 4.5:1 (3:1 for large text and UI components)
+- [ ] Page content and functions remain available at 200% browser zoom
+
+---
+
+### **Mobile Web**
+
+*Execution: included in this cycle*
+
+> **Note:** Checks are performed on iPhone 12 Pro in Safari, in portrait orientation unless stated otherwise. Functionality already covered by other sections is not repeated; this section covers what is specific to a small touch screen.
+
+- [ ] Home, Download, Results and Shop pages fit the screen width without horizontal scrolling
+- [ ] The mobile menu opens and closes, and all main menu items are available in it
+- [ ] About Us sub-items (About MyWhoosh, Leadership) can be opened by tap
+- [ ] Download page: the iOS button opens the MyWhoosh app in the App Store app
+- [ ] Login form: tapping the Email Address field opens the keyboard with "@", and the fields are not hidden by the keyboard
+- [ ] Login with valid credentials succeeds, including reCAPTCHA completed by touch
+- [ ] Event Results: the results table can be read; a wide table scrolls inside its block, not the whole page
+- [ ] Shop: product options can be selected, the product can be added to the cart by tap, and the cart counter updates
+- [ ] Carousels on the Home page can be swiped
+- [ ] Rotating the phone to landscape and back keeps the layout intact, without overlapping or cut-off content
