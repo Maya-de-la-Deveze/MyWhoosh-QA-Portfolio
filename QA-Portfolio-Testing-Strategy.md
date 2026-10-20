@@ -113,7 +113,7 @@ Both **positive** (valid input) and **negative** (invalid input, edge cases, and
 | Events | Checklist | Not executed |
 | Results | Checklist | Not executed |
 | Shop | Checklist, Test Cases (TC-SHOP), Exploratory (ES-01 – ES-04) | Partially executed |
-| Contact Form | Checklist, Test Cases (TC-CONTACT) | Executed |
+| Contact Form | Test Cases (TC-CONTACT) | Executed |
 | Workout Builder | Checklist | Executed |
 | UCI CEWC | Checklist | Not executed |
 | Podcast | Checklist | Frozen baseline |
@@ -185,6 +185,20 @@ All project documents and their status are listed in the [README](README.md).
 | Safari | iPhone 12 Pro | Mobile Web |
 
 The depth of testing is chosen by risk. Website logic (filters, calculations, links) works the same in every browser, so it is fully tested in Chrome only. Safari handles cookies more strictly, so it covers the areas that rely on cookies and session. Firefox gets a short smoke set. Browsers update automatically; the exact versions are recorded with each test run.
+
+---
+
+### Test Execution
+
+- Results are recorded in Qase test runs, one run per browser configuration, and exported after each run.
+- Each check gets one of four statuses:
+  - **Passed** — the actual result matches the expected result
+  - **Failed** — a defect is found and linked to a Jira issue
+  - **Blocked** — the check cannot be executed; the reason is recorded (e.g. no suitable test account)
+  - **Skipped** — the check is not applicable (e.g. Podcast checks, see Scope Freeze)
+- Every bug found in Chrome is re-checked in Safari and Firefox; the browsers where it occurs are recorded in the "Found in" field.
+- Defects reported before the test runs (KAN-4, KAN-10) are re-tested: if a defect still occurs, the failed check links the existing Jira issue; if it no longer occurs, the issue is closed with a note. New Jira issues are created only for new defects.
+- Visual and usability findings that are not functional defects are collected for the UI Review and UX Review.
 
 ---
 
