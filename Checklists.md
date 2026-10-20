@@ -137,7 +137,7 @@ Checks:
 
 ### **Results** (results.mywhoosh.com)
 
-*Execution: included in this cycle*
+*Execution: not executed in this cycle*
 
 *Checks are performed without logging in.*
 
@@ -278,7 +278,7 @@ Checks:
 
 #### *Search*
 
-*Execution: included in this cycle*
+*Execution: not executed in this cycle*
 
 - [ ] Search icon opens the search panel, and "Close" closes it
 - [ ] Results appear while typing and update with each character
@@ -290,7 +290,7 @@ Checks:
 
 #### *Wishlist*
 
-*Execution: included in this cycle*
+*Execution: not executed in this cycle*
 
 - [ ] An empty Wishlist shows "There are no products on the Wishlist!"
 - [ ] "Add to Wishlist" on the product page adds the product, and the wishlist counter increases by 1
@@ -302,7 +302,7 @@ Checks:
 
 #### *Account*
 
-*Execution: included in this cycle*
+*Execution: not executed in this cycle*
 
 - [ ] For a guest, the Account icon opens the MyWhoosh Sign In page
 - [ ] After logging in, the Account icon opens the account page
@@ -311,7 +311,7 @@ Checks:
 
 #### *Contact*
 
-*Execution: included in this cycle*
+*Execution: not executed in this cycle*
 
 - [ ] Contact page shows the map and the contact form (Full Name, Email Address, Subject, Message, reCAPTCHA, Submit)
 
@@ -473,7 +473,7 @@ Checks:
 
 *Execution: included in this cycle*
 
-> **Note:** Chrome and Safari on macOS (Tier 1) run the full execution scope. This section is the smoke set for Firefox on macOS (Tier 2), compared with Chrome. Mobile checks on iPhone are covered in [Mobile Web](#mobile-web).
+> **Note:** Chrome on macOS runs the full execution scope. Safari on macOS runs the areas that depend on cookies and session (Login test cases, Subdomain Integration, Shop Mini Cart and Cart Page, Workout Builder), this smoke set, and a re-check of every bug found in Chrome. Firefox on macOS runs this smoke set only. Mobile checks on iPhone are covered in [Mobile Web](#mobile-web).
 
 - [ ] Home page loads with all blocks displayed, and main menu items open their pages
 - [ ] Login with valid credentials succeeds, and the user stays logged in on workout.mywhoosh.com
