@@ -100,6 +100,7 @@ Testing is performed from the perspective of an end user interacting with the pu
 Both **positive** (valid input) and **negative** (invalid input, edge cases, and boundary values) scenarios are covered where applicable.
 
 ---
+
 ### Test Coverage Matrix
 
 | Feature | Test Artifact | Execution |
@@ -110,7 +111,7 @@ Both **positive** (valid input) and **negative** (invalid input, edge cases, and
 | Download | Checklist | Executed |
 | Routes | Checklist | Not executed |
 | Events | Checklist | Not executed |
-| Results | Checklist | Executed |
+| Results | Checklist | Not executed |
 | Shop | Checklist, Test Cases (TC-SHOP), Exploratory (ES-01 – ES-04) | Partially executed |
 | Contact Form | Checklist, Test Cases (TC-CONTACT) | Executed |
 | Workout Builder | Checklist | Executed |
@@ -179,7 +180,7 @@ All project documents and their status are listed in the [README](README.md).
 | Browser | Device | What is executed |
 |---------|--------|------------------|
 | Chrome | MacBook | Full execution scope |
-| Safari | MacBook | Areas that depend on cookies and session (Login test cases, Subdomain Integration, Shop cart and Wishlist, Workout Builder), the Cross-Browser smoke set, and a re-check of every bug found in Chrome |
+| Safari | MacBook | Areas that depend on cookies and session (Login test cases, Subdomain Integration, Shop Mini Cart and Cart Page, Workout Builder), the Cross-Browser smoke set, and a re-check of every bug found in Chrome |
 | Firefox | MacBook | Cross-Browser smoke set and a re-check of every bug found in Chrome |
 | Safari | iPhone 12 Pro | Mobile Web |
 
