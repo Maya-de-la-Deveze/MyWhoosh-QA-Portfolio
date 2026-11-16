@@ -181,7 +181,7 @@ Where no requirement is published, expected results are based on user expectatio
 |:----------|:-------|
 | **High** | Login · Registration · Subdomain Integration (navigation and login state) · Shop cart (product page, mini cart, cart, guest checkout) · Main navigation · Download |
 | **Medium** | Workout Builder access · Mobile web · Cross-browser smoke checks · Basic accessibility · Results |
-| **Low** | Get Started · Routes · Events · UCI CEWC · About Us · Home page footer · Shop search, wishlist and account · MyWhoosh Hub / Podcast *(frozen)* |
+| **Low** | Get Started · Routes · Events · UCI CEWC · About Us · Home page footer · Shop search, wishlist and account · Contact forms *(frozen)* · MyWhoosh Hub / Podcast *(frozen)* |
 
 All High and Medium areas are executed in this cycle, except Results. Low areas are documented in the checklists but not executed. The execution scope is defined in the [Test Coverage Matrix](QA-Portfolio-Testing-Strategy.md#test-coverage-matrix); the scope and out-of-scope areas are described in the [Testing Strategy](QA-Portfolio-Testing-Strategy.md#scope).
 
