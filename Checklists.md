@@ -256,7 +256,7 @@ Checks:
 - [ ] "Continue Shopping" opens the Shop page
 - [ ] "Order Tracking" tab opens the Order Tracking page
 
-> **Note:** Adding products, changing quantity, Update Cart, removing products and keeping the cart after login are covered by test cases TC-SHOP (in progress). Cart state persistence is covered by exploratory sessions ES-01 – ES-04.
+> **Note:** Adding products, changing quantity, Update Cart, removing products and keeping the cart after login are covered by test cases TC-SHOP (planned). Cart state persistence is covered by exploratory sessions ES-01 – ES-04.
 
 #### *Checkout*
 
@@ -315,7 +315,7 @@ Checks:
 
 - [ ] Contact page shows the map and the contact form (Full Name, Email Address, Subject, Message, reCAPTCHA, Submit)
 
-> **Note:** Contact form validation is covered by test cases TC-CONTACT. Valid messages are not submitted, as they would reach the real MyWhoosh support team.
+> **Note:** Contact form validation is covered by test cases TC-CONTACT (planned). Valid messages are not submitted, as they would reach the real MyWhoosh support team.
 
 ---
 
@@ -476,7 +476,7 @@ Checks:
 > **Note:** Chrome on macOS runs the full execution scope. Safari on macOS runs the areas that depend on cookies and session (Login test cases, Subdomain Integration, Shop Mini Cart and Cart Page, Workout Builder), this smoke set, and a re-check of every bug found in Chrome. Firefox on macOS runs this smoke set only. Mobile checks on iPhone are covered in [Mobile Web](#mobile-web).
 
 - [ ] Home page loads with all blocks displayed, and main menu items open their pages
-- [ ] Login with valid credentials succeeds, and the user stays logged in on workout.mywhoosh.com
+- [ ] Login with the test account succeeds, and the user stays logged in on workout.mywhoosh.com
 - [ ] Download page buttons start the download or open the correct app store page
 - [ ] In the Shop, a product with all options selected can be added to the cart, and the cart counter updates
 - [ ] Fonts, spacing, images and alignment on the Home, Results and Shop pages look the same as in Chrome
@@ -510,7 +510,7 @@ Checks:
 - [ ] About Us sub-items (About MyWhoosh, Leadership) can be opened by tap
 - [ ] Download page: the iOS button opens the MyWhoosh app in the App Store app
 - [ ] Login form: tapping the Email Address field opens the keyboard with "@", and the fields are not hidden by the keyboard
-- [ ] Login with valid credentials succeeds, including reCAPTCHA completed by touch
+- [ ] Login with the test account succeeds, including reCAPTCHA completed by touch
 - [ ] Event Results: the results table can be read; a wide table scrolls inside its block, not the whole page
 - [ ] Shop: product options can be selected, the product can be added to the cart by tap, and the cart counter updates
 - [ ] Carousels on the Home page can be swiped
