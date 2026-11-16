@@ -159,7 +159,7 @@ The login page displays the following elements:
 
 > **Expected result is based on:** consistency with the registration form ([TC-REG-07](#tc-reg-07-invalid-email-format)): both forms of the product are expected to check the email format in the same way. The format check does not reveal any account information, unlike the account check in TC-LOGIN-05 and TC-LOGIN-06.
 
-> **Note:** The result is recorded separately for each value. If a general error message (e.g. "Invalid email or password") is shown instead, the test case is marked as Failed with Low severity.
+> **Note:** The result is recorded separately for each value. If a general error message (e.g. "Invalid email or password") is shown instead, the test case is marked as Failed with Minor severity.
 
 ---
 
