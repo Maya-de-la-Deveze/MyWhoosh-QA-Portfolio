@@ -7,7 +7,6 @@ Manual test cases for the MyWhoosh website covering key user flows and related f
 - [Login](#login)
 - [Registration](#registration)
 - Shop — planned
-- Contact Form — planned
 
 > **Note:** Each test case has a priority (High / Medium / Low). Test cases that cannot be executed are marked as **Blocked** in the test runs, with the reason stated in the test case. Out-of-scope testing types are listed in the [Testing Strategy](QA-Portfolio-Testing-Strategy.md#scope).
 
