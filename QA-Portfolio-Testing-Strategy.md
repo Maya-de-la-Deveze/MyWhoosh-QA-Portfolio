@@ -104,7 +104,7 @@ Both **positive** (valid input) and **negative** (invalid input, edge cases, and
 ### Test Coverage Matrix
 
 | Feature | Test Artifact | Execution |
-|---------|---------------|-----------|
+|:---------|:---------------|:-----------|
 | **Main Website** | | |
 | Navigation | Checklist | Executed |
 | Get Started (How It Works) | Checklist | Not executed |
@@ -120,7 +120,7 @@ Both **positive** (valid input) and **negative** (invalid input, edge cases, and
 | About Us | Checklist | Not executed |
 | Home Page Footer | Checklist | Not executed |
 | Login | Test Cases | Executed |
-| Registration | Test Cases, Exploratory (ES-05, ES-07) | In progress |
+| Registration | Test Cases, Exploratory (ES-05, ES-07) | Executed |
 | **Cross-Website** | | |
 | Subdomain Integration | Checklist, Exploratory (ES-05, ES-06, ES-08) | Executed |
 | Cross-Browser Compatibility | Checklist | Executed |
@@ -143,7 +143,7 @@ Both **positive** (valid input) and **negative** (invalid input, edge cases, and
 ### Tools
 
 | Purpose | Tool |
-|----------|------|
+|:----------|:------|
 | Checklists and test cases | Qase |
 | Test runs | Qase (results are exported after each run and stored in the repository) |
 | Bug tracking | Jira |
@@ -175,10 +175,14 @@ All project documents and their status are listed in the [README](README.md).
 - Mozilla Firefox 158.0
 - Safari on iOS 26.6.2
 
+#### Browser Language
+
+- English (United States), so that browser messages and the reCAPTCHA are shown in English
+
 #### Browser Matrix
 
 | Browser | Device | What is executed |
-|---------|--------|------------------|
+|:---------|:--------|:------------------|
 | Chrome | MacBook | Full execution scope |
 | Safari | MacBook | Areas that depend on cookies and session (Login test cases, Subdomain Integration, Shop Mini Cart and Cart Page, Workout Builder), the Cross-Browser smoke set, and a re-check of every bug found in Chrome |
 | Firefox | MacBook | Cross-Browser smoke set and a re-check of every bug found in Chrome |
@@ -196,6 +200,8 @@ The depth of testing is chosen by risk. Website logic (filters, calculations, li
   - **Failed** — a defect is found and linked to a Jira issue
   - **Blocked** — the check cannot be executed; the reason is recorded (e.g. no suitable test account)
   - **Skipped** — the check is not applicable (e.g. Podcast checks, see Scope Freeze)
+- Behaviour that cannot be compared with a requirement (e.g. the lockout policy in TC-LOGIN-14) is recorded as an observation in the result comment and does not change the status.
+- Defect severity follows the scale used in Qase and Jira: Blocker, Critical, Major, Normal, Minor, Trivial.
 - Every bug found in Chrome is re-checked in Safari and Firefox; the browsers where it occurs are recorded in the "Found in" field.
 - Defects reported before the test runs (KAN-4, KAN-10) are re-tested: if a defect still occurs, the failed check links the existing Jira issue; if it no longer occurs, the issue is closed with a note. New Jira issues are created only for new defects.
 - Visual and usability findings that are not functional defects are collected for the UI Review and UX Review.
@@ -207,7 +213,7 @@ The depth of testing is chosen by risk. Website logic (filters, calculations, li
 - Testing is limited to the publicly accessible MyWhoosh website; no access to staging/test environments or backend systems
 - Real payments and account-sensitive actions (e.g. subscription purchase) are not executed; no orders are placed, and the Checkout page for logged-in users is not tested
 - Valid messages are not submitted through the Contact form, as they would reach the real MyWhoosh support team; only form validation is checked
-- Only one personal test account is available; test cases that need other account types (e.g. an inactive or disabled account) are marked as Blocked
+- Dedicated test accounts are used instead of a personal account: `deveze.testing+recon@gmail.com` for the Login test cases, and accounts created during the Registration test cases (`+mywhoosh1`, `+child1`). Test cases that need other account types (e.g. an inactive or disabled account) are marked as Blocked
 - Findings reflect the site's behaviour at the time of testing and may not remain accurate if the site is updated afterward. The site changed several times during the project (main menu, footer, UCI CEWC, Workout Builder); these changes are documented with the date they were noticed, and findings from the test runs are recorded with the date and a screenshot
 - Test run results are not stored permanently on the Qase free plan, so they are exported after each run and kept in the repository
 - This is an independent learning project, not affiliated with or commissioned by MyWhoosh
