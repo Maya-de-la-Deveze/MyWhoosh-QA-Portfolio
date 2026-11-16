@@ -10,6 +10,7 @@
 
 MyWhoosh is a virtual sports platform for indoor training with connected fitness equipment. It supports cycling, running and rowing, with virtual routes, structured workouts, races and community events.
 
+| Parameter | Details |
 |---|---|
 | **Website** | [mywhoosh.com](https://mywhoosh.com) |
 | **Headquarters** | Abu Dhabi, United Arab Emirates |
