@@ -68,6 +68,8 @@ Testing of newly introduced or actively changing functionality falls outside the
 
 Other sections that changed during the project (e.g. UCI CEWC, Workout Builder, Results, the footer) were updated in the checklists to match the site as of October 2026.
 
+**Contact forms.** The website has two contact forms: on the Shop Contact page (`store.mywhoosh.com/contact`, with reCAPTCHA) and on the main website (Contact Us, without reCAPTCHA). Both forms are frozen and not tested in this cycle: a submitted message could reach the real MyWhoosh support team, and form validation is already covered by the Login and Registration test cases.
+
 ---
 
 ### Testing Objectives
@@ -90,7 +92,7 @@ The objectives of this project are to:
 Testing is performed manually, combining three complementary methods:
 
 - **Checklist-based testing** — checklists covering the website pages and features
-- **Test-case-based testing** — predefined test cases covering critical user flows with validation rules or multiple steps (login, registration, shopping cart, contact form), designed before execution
+- **Test-case-based testing** — predefined test cases covering critical user flows with validation rules or multiple steps (login, registration, shopping cart), designed before execution
 - **Exploratory testing** — time-boxed sessions used to identify usability issues, unexpected behaviour, UI inconsistencies, and edge cases that may not be covered by scripted test cases
 
 As no requirements specification is available, expected results are based on user expectations, common user experience and consistency within the product.
@@ -113,7 +115,7 @@ Both **positive** (valid input) and **negative** (invalid input, edge cases, and
 | Events | Checklist | Not executed |
 | Results | Checklist | Not executed |
 | Shop | Checklist, Test Cases (TC-SHOP), Exploratory (ES-01 – ES-04) | Partially executed |
-| Contact Form | Test Cases (TC-CONTACT) | Executed |
+| Contact Forms | — | Frozen |
 | Workout Builder | Checklist | Executed |
 | UCI CEWC | Checklist | Not executed |
 | Podcast | Checklist | Frozen baseline |
@@ -136,7 +138,7 @@ Both **positive** (valid input) and **negative** (invalid input, edge cases, and
 
 **Not executed** — the checklist documents the area but is not run in this cycle. 
 
-**Frozen baseline** — see Scope Freeze.
+**Frozen baseline**, **Frozen** — see Scope Freeze.
 
 ---
 
@@ -212,7 +214,7 @@ The depth of testing is chosen by risk. Website logic (filters, calculations, li
 
 - Testing is limited to the publicly accessible MyWhoosh website; no access to staging/test environments or backend systems
 - Real payments and account-sensitive actions (e.g. subscription purchase) are not executed; no orders are placed, and the Checkout page for logged-in users is not tested
-- Valid messages are not submitted through the Contact form, as they would reach the real MyWhoosh support team; only form validation is checked
+- Contact forms are not tested, as a submitted message could reach the real MyWhoosh support team (see Scope Freeze)
 - Dedicated test accounts are used instead of a personal account: `deveze.testing+recon@gmail.com` for the Login test cases, and accounts created during the Registration test cases (`+mywhoosh1`, `+child1`). Test cases that need other account types (e.g. an inactive or disabled account) are marked as Blocked
 - Findings reflect the site's behaviour at the time of testing and may not remain accurate if the site is updated afterward. The site changed several times during the project (main menu, footer, UCI CEWC, Workout Builder); these changes are documented with the date they were noticed, and findings from the test runs are recorded with the date and a screenshot
 - Test run results are not stored permanently on the Qase free plan, so they are exported after each run and kept in the repository
