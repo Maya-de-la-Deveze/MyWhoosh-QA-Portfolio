@@ -2,100 +2,59 @@
 
 ## Product Analysis
 
+*The website is described as of October–November 2026. Changes noticed during the project are listed in the [Testing Strategy](QA-Portfolio-Testing-Strategy.md#scope-freeze).*
+
+---
+
 ### Product Overview
 
-MyWhoosh is a virtual sports platform that allows users to train indoors using connected fitness equipment.
+MyWhoosh is a virtual sports platform for indoor training with connected fitness equipment. It supports cycling, running and rowing, with virtual routes, structured workouts, races and community events.
 
-The platform supports cycling, running, and rowing, providing virtual routes, structured workouts, races, and community events.
+| | |
+|---|---|
+| **Website** | [mywhoosh.com](https://mywhoosh.com) |
+| **Headquarters** | Abu Dhabi, United Arab Emirates |
+| **Platforms (app)** | Windows, macOS, iOS, Android, Apple TV |
+| **Business model** | Free-to-download app with progression mechanics (Levels, XP, Season Pass, unlockable items) |
 
-**Website**
+**Target audience:** indoor and competitive cyclists, triathletes, rowers, beginners.
 
-https://mywhoosh.com
+#### Product Context
 
-**Company**
+Most product features live in the **application**, which is out of scope: Rowing and Triathlon modes, virtual gear shifting (MyShift), Speed Sensor mode, heads-up display, Link App, calendar and workout management, Day/Night mode, data migration, offline mode and ride data recovery.
 
-MyWhoosh
-
-**Headquarters**
-
-Abu Dhabi, United Arab Emirates
-
-**Supported Platforms**
-
-- Windows
-- macOS
-- iOS
-- Android
-
-**Business Model**
-
-Free-to-download application with progression mechanics such as Levels, XP, Season Pass, and unlockable items.
+The **website** supports the app. It helps users get started and download the app, browse routes and events, view results, build workouts, buy merchandise and manage their account. This portfolio tests the website only.
 
 ---
 
-## Target Audience
+### Web Ecosystem
 
-- Indoor cyclists
-- Competitive cyclists
-- Triathletes
-- Rowers
-- Beginners
+The website consists of the main site and several independent subdomains.
 
----
+| Area | Domain | Login required |
+|------|--------|----------------|
+| Main website | `mywhoosh.com` | No |
+| Authentication / user account | `event.mywhoosh.com` | — |
+| Results | `results.mywhoosh.com` | No |
+| Shop | `store.mywhoosh.com` | For the account page and checkout |
+| Workout Builder | `workout.mywhoosh.com` | For all sections (the start page is public) |
+| UCI CEWC | `uci.mywhoosh.com` | No |
 
-## Core Features
+#### QA Notes
 
-### Rowing Mode
+This architecture creates risks that a single-domain site does not have:
 
-Indoor rowing with performance tracking. Supports Concept2 and FTMS-compatible rowing machines.
+- Navigation between subdomains and back
+- Login state consistency (the user stays logged in on every subdomain after one login)
+- Logout on one subdomain and its effect on the others
+- Redirect to the login page and return to the requested page
+- Link integrity and a consistent user experience across subdomains (headers and footers differ)
 
-### Triathlon Mode
-
-Dual-login bike/run transitions designed for triathlon events.
-
-### Workout Builder
-
-Create, import, and manage custom workouts through the website with synchronization to the application.
-
-### Virtual Gear Shifting (MyShift)
-
-Thirty virtual gears controlled via the MyWhoosh Link App or directly in the game.
-
-### Speed Sensor Mode
-
-Allows users to ride without a smart trainer using speed-to-power algorithms.
-
-### Heads-Up Display (HUD)
-
-Displays real-time ride information during Free Ride, Workouts, and Events.
-
-### Link App Integration
-
-Allows users to start and manage workouts remotely.
-
-### Calendar & Workout Management
-
-Supports scheduling, rescheduling, and restoring missed workouts.
-
-### Day / Night Mode
-
-Automatic or manual environment lighting based on the user's local time.
-
-### Data Migration
-
-Allows riders to transfer their profile level and rating from supported platforms.
-
-### Offline Mode
-
-Continues recording rides locally during temporary connection loss.
-
-### Data Recovery
-
-Temporarily stores ride data server-side after crashes or unexpected disconnections.
+These risks are the main reason why **Subdomain Integration** is one of the executed focus areas (see the [Test Coverage Matrix](QA-Portfolio-Testing-Strategy.md#test-coverage-matrix)).
 
 ---
 
-### Main Website
+### Main Website Navigation
 
 - Get Started
 - Download
@@ -105,311 +64,127 @@ Temporarily stores ride data server-side after crashes or unexpected disconnecti
 - Shop
 - Workout Builder
 - UCI CEWC
-- Podcast
+- MyWhoosh Hub *(previously "Podcast", then "Blog"; see [Scope Freeze](QA-Portfolio-Testing-Strategy.md#scope-freeze))*
 - About Us
 - Login
 
-### MyWhoosh Web Ecosystem
-
-**Main Website**
-mywhoosh.com
-
-
-**Results**
-├── results.mywhoosh.com
-   
-
-**Shop**
-├── store.mywhoosh.com
-   
-
-**Workout Builder**
-├── workout.mywhoosh.com
-   
-
-**UCI CEWC**
-├── uci.mywhoosh.com
-   
-
-**Authentication / User Account**
-├── event.mywhoosh.com
-   
-
 ---
 
-## QA Notes
+### Primary User Flows
 
-The MyWhoosh ecosystem consists of the main website and multiple independent subdomains.
-
-This architecture introduces additional testing scenarios, including:
-
-- Cross-subdomain navigation
-- Session persistence
-- Login state consistency
-- Link integrity
-- User experience consistency across services
-
----
-
-## Primary User Flows
-
-### Get Started
+#### Get Started
 
 ***Homepage → Get Started → Learn how to start using MyWhoosh***
 
-**Available sections**
+**Sections:** Get the App · The Essentials · Start Riding · What's New
 
-- Get the App
-- The Essentials
-- Start Riding
-- What's New
+**QA observation:** The page is an onboarding guide rather than standalone functionality. It explains the setup process, introduces the required equipment and leads users to download the app. Several "Download App" buttons appear on the page.
 
-**QA Observation**
-
-The Get Started page serves as an onboarding guide for new users rather than providing standalone functionality.
-
-It explains the setup process, introduces the required equipment, and guides users toward downloading the application. Multiple "Download App" call-to-action buttons are available throughout the page.
-
-### Download
+#### Download
 
 ***Homepage → Download → Select platform → Download application***
 
-**Available platforms**
+**Platforms:** iOS · Android · MyWhoosh (Windows) · MyWhoosh HD (Windows) · macOS · Apple TV · Link App iOS · Link App Android
 
-- iOS
-- Android
-- Windows (MyWhoosh)
-- Windows (MyWhoosh HD)
-- macOS
-- Apple TV
-- Link App iOS
-- Link App Android
+**QA observation:** Desktop platforms start a file download. Mobile and Apple TV platforms open the app store. No login is required.
 
-**QA Observation**
-
-The Download page provides installation packages for all supported platforms.
-
-Users select the required platform and download the appropriate application. No authentication is required.
-
-### Routes
+#### Routes
 
 ***Homepage → Routes → Select destination → View route information***
 
-**Available sections**
+**QA observation:** The side menu lists all destinations. Each destination has a page with a description, route statistics (total routes, distance and elevation gain) and a table of routes with distance and elevation. No login is required.
 
-- France
-- Bhutan
-- Japan
-- UCI
-- MyWhoosh World
-- Switzerland
-- California
-- Hudayriyat
-- Arabia
-- Colombia
+#### Events
 
-**QA Observation**
+***Homepage → Events → Select event → Event details → Register Now → Sign In / Create New Account***
 
-The Routes page presents all available virtual riding destinations.
+**QA observation:** Public event information is available without login. Registering for an event requires signing in or creating an account. Only the events listing page is in the checklist scope.
 
-Each destination has a dedicated page containing a general description, route statistics, and a table listing the available routes with distance and elevation information.
-
-No authentication is required to browse the available routes.
-
-### Events
-
-***Homepage → Events → Select event → Event Details → Register Now → Sign In / Create New Account***
-
-**Available sections**
-
-- Upcoming Events
-- Event Details
-- Event Information
-- Registration
-
-**QA Observation**
-
-The Events page displays a list of upcoming events available on the MyWhoosh platform.
-
-Selecting an event opens a dedicated event page containing the event information and a registration option.
-
-Users can browse all public event information without authentication. However, registering for an event requires signing in to an existing account or creating a new account.
-
-### Results
+#### Results
 
 ***Homepage → Results → Select event → View Results***
 
-**Available sections**
+**Sections:** Results list (gender, search, category and date filters) · Event results (days, checkpoints, categories, participant search)
 
-- Event Results
-- Search
-- Filters
-- Categories
-- Stage Results
-- Individual Rankings
+**QA observation:** Public race results are available without login. Users can filter events, open the results of an event, switch between days, checkpoints and categories, and search for participants.
 
-**QA Observation**
+#### Shop
 
-The Results page provides access to public race results without requiring authentication.
+***Homepage → Shop → Product page → Cart***
 
-Users can browse completed events, open detailed results for a selected event, search for participants, filter results, switch between categories, and view stage-specific rankings.
+**Sections:** Shop home · Product categories · Product page · Mini cart · Cart · Checkout · Order tracking · Search · Wishlist · Account · Contact
 
-### Shop
+**QA observation:** The shop is a standalone e-commerce site on `store.mywhoosh.com`. Products can be browsed and added to the cart and wishlist without login. Checkout and the account page require a MyWhoosh account; for a guest, checkout shows "Login Required". No orders are placed in this project.
 
-***Homepage → Shop → Browse products***
+#### Workout Builder
 
-**Available sections**
+***Homepage → Workout Builder → Select section → Sign In → Section***
 
-- Product Categories
-- Product Details
-- Search
-- Wishlist
-- Shopping Cart
-- Contact Us
+**Sections:** Workouts · My Training Plans · MarketPlace · Subscriptions
 
-**QA Observation**
+**QA observation:** The Workout Builder start page opens without login and shows the four section cards. Opening any section requires login; a guest is sent to the MyWhoosh Sign In page.
 
-The Shop is hosted on a dedicated subdomain (`store.mywhoosh.com`) and functions as a standalone e-commerce website within the MyWhoosh ecosystem.
+#### UCI CEWC
 
-Users can browse products without authentication. Shopping features such as the wishlist, account management, and checkout require user authentication.
+***Homepage → UCI CEWC***
 
-### Workout Builder
+**Sections:** 2026 UCI CEWC · Event Details · Event Gallery · Results
 
-***Homepage → Workout Builder → Login page***
+**QA observation:** The section has its own header navigation, which differs from the main website. "Explore" opens the 2026 UCI CEWC page, and the highlighted button next to the menu opens the Event Gallery. The content changes with each championship.
 
-**Available sections**
+#### MyWhoosh Hub and Podcast *(frozen baseline)*
 
-- Workouts
-- My Training Plans
-- Marketplace
-- Subscriptions
+***Homepage → MyWhoosh Hub***
 
-**QA Observation**
+**QA observation:** "Blog" and "MyWhoosh Hub" open the same page. The Podcast page still exists and is linked from the footer and from the headers of some subdomains. The Podcast checklist is kept as a frozen baseline and is not executed (see [Scope Freeze](QA-Portfolio-Testing-Strategy.md#scope-freeze)).
 
-The Workout Builder is hosted on a dedicated subdomain. Selecting any available section opens the Workout Builder website, where unauthenticated users are redirected to the login page before they can access the available features.
+#### About Us
 
-### UCI CEWC
+***Homepage → About Us → About MyWhoosh / Leadership***
 
-***Homepage → 2025 UCI CEWC***
+**QA observation:** About Us is a dropdown in the main navigation. Each option opens its own information page.
 
-**Available sections**
+#### Login
 
-- 2025 UCI CEWC
-- Explore Abu Dhabi
-- Event Details
-- Event Gallery
-- Results
-- Watch Replay
+***Homepage → Login (`event.mywhoosh.com`)***
 
-**QA Observation**
+**Elements:** Email Address · Password · Forgot Password? · reCAPTCHA · Submit · Stay signed in · Create New Account?
 
-The UCI CEWC section combines content hosted within the MyWhoosh website and external resources.
+**QA observation:** Existing users sign in with their MyWhoosh account. The "Submit" button is enabled by default. Users can recover a password or open the registration page.
 
-- **Explore** redirects users to the dedicated UCI CEWC website.
-- **Watch Replay** opens the official UCI event page.
-- **View Full Results** opens the official UCI results page in a new browser tab.
-- The section uses a dedicated secondary navigation menu that differs from the main website navigation.
+#### Registration
 
-### Podcast
+***Homepage → Login → Create New Account? → Registration form → Verification email → Account verified***
 
-***Homepage → Podcast***
+**Fields:** First Name · Last Name · Email Address · Gender · Password · Confirm Password · Country · Date of birth · Weight (kg) · Height (cm) · consent to the Privacy Notice and Terms & Conditions · newsletter (optional) · reCAPTCHA
 
-**Available sections**
-
-- Featured podcast
-- Podcast episodes
-- Apple Podcasts
-- Spotify
-- YouTube
-
-**QA Observation**
-
-The page displays the latest podcast followed by a list of episodes. Each episode has its own page with an embedded player and links to Apple Podcasts, Spotify, and YouTube.
-
-### About Us
-
-***Homepage → About Us***
-
-**Available sections**
-
-- About MyWhoosh
-- Leadership
-
-**QA Observation**
-
-The **About Us** menu is implemented as a dropdown in the main navigation. Selecting either option opens its corresponding information page.
-
-### Login
-
-***Homepage → Login***
-
-**Available sections**
-
-- Email address
-- Password
-- Forgot Password
-- Stay signed in
-- reCAPTCHA verification
-- Submit
-- Create New Account
-
-**QA Observation**
-
-The Login page allows existing users to sign in using their MyWhoosh account. Users can recover a forgotten password or navigate to the account registration page if they do not already have an account.
-
-
-
-
-
-
-
-
-
-### Cross-Subdomain Navigation
-
-Verify navigation between:
-
-- mywhoosh.com
-- event.mywhoosh.com
-- workout.mywhoosh.com
-- store.mywhoosh.com
+**QA observation:** The "Submit" button is enabled only after the consent checkbox is selected and the reCAPTCHA verification is completed. After registration, the account is verified through a link in the email. Registration is also reached from event registration ("Register Now") and from pages that require login.
 
 ---
 
-## Out of Scope
+### Known Requirements
 
-The following areas are not included in this portfolio:
+No requirements specification is available. The following requirements are published in the MyWhoosh **Terms & Conditions** (checked on 12 November 2026) and are used as the basis for expected results in the [Test Cases](Test-Cases.md):
 
-- Native desktop application functionality
-- Native mobile application functionality
-- Smart trainer and hardware integration
-- Payment processing
-- Backend and API testing
+- Users must be at least **6 years** old.
+- Users aged **6 to 18** may register only with **parental consent**, which is verified through the parent's email address. If consent is not given within one week, the child account data is deleted.
+- Registration requires an email address, age, gender, country, height and weight.
+- Login credentials must be kept confidential.
 
----
-
-## Testing Priorities
-
-### High Priority
-
-- Navigation
-- Registration
-- Login
-- Download flow
-- Newsletter validation
-
-### Medium Priority
-
-- Events
-- Routes
-- Cross-subdomain navigation
-
-### Low Priority
-
-- About pages
-- Leadership
-- Podcast
+Where no requirement is published, expected results are based on user expectations, common user experience and consistency within the product (see the [Testing Strategy](QA-Portfolio-Testing-Strategy.md#test-approach)).
 
 ---
 
-This analysis serves as the foundation for the Checklists, Test Cases, Bug Reports, UI/UX Reviews, Accessibility Review, and Final Test Report included in this portfolio.
+### Testing Priorities
+
+| Priority | Areas |
+|----------|-------|
+| **High** | Login · Registration · Subdomain Integration (navigation and login state) · Shop cart (product page, mini cart, cart, guest checkout) · Main navigation · Download |
+| **Medium** | Workout Builder access · Mobile web · Cross-browser smoke checks · Basic accessibility · Results |
+| **Low** | Get Started · Routes · Events · UCI CEWC · About Us · Home page footer · Shop search, wishlist and account · MyWhoosh Hub / Podcast *(frozen)* |
+
+All High and Medium areas are executed in this cycle, except Results. Low areas are documented in the checklists but not executed. The execution scope is defined in the [Test Coverage Matrix](QA-Portfolio-Testing-Strategy.md#test-coverage-matrix); the scope and out-of-scope areas are described in the [Testing Strategy](QA-Portfolio-Testing-Strategy.md#scope).
+
+---
+
+This analysis is the basis for the Checklists, Test Cases, Bug Reports, UI and UX Reviews, Accessibility Review and Final Test Report in this portfolio.
