@@ -32,7 +32,7 @@ The **website** supports the app. It helps users get started and download the ap
 The website consists of the main site and several independent subdomains.
 
 | Area | Domain | Login required |
-|------|--------|----------------|
+|:------|:--------|:----------------|
 | Main website | `mywhoosh.com` | No |
 | Authentication / user account | `event.mywhoosh.com` | — |
 | Results | `results.mywhoosh.com` | No |
@@ -178,7 +178,7 @@ Where no requirement is published, expected results are based on user expectatio
 ### Testing Priorities
 
 | Priority | Areas |
-|----------|-------|
+|:----------|:-------|
 | **High** | Login · Registration · Subdomain Integration (navigation and login state) · Shop cart (product page, mini cart, cart, guest checkout) · Main navigation · Download |
 | **Medium** | Workout Builder access · Mobile web · Cross-browser smoke checks · Basic accessibility · Results |
 | **Low** | Get Started · Routes · Events · UCI CEWC · About Us · Home page footer · Shop search, wishlist and account · MyWhoosh Hub / Podcast *(frozen)* |
