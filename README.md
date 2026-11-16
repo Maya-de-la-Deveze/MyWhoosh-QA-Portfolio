@@ -35,7 +35,7 @@ The documentation follows the same workflow a QA Engineer would typically use du
 ### Tools
 
 
-Qase · Jira · GitHub · Chrome DevTools · Safari Web Inspector · axe DevTools · Lighthouse · VoiceOver · Figma
+Qase · Jira · GitHub · Chrome DevTools · Safari Web Inspector · Firefox DevTools · axe DevTools · Lighthouse · VoiceOver · Figma
 
 ---
 
