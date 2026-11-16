@@ -315,7 +315,7 @@ Checks:
 
 - [ ] Contact page shows the map and the contact form (Full Name, Email Address, Subject, Message, reCAPTCHA, Submit)
 
-> **Note:** Contact form validation is covered by test cases TC-CONTACT (planned). Valid messages are not submitted, as they would reach the real MyWhoosh support team.
+> **Note:** The contact form is frozen and not tested (see [Scope Freeze](QA-Portfolio-Testing-Strategy.md#scope-freeze)), as a submitted message could reach the real MyWhoosh support team.
 
 ---
 
